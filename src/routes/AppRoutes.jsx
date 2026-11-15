@@ -15,6 +15,9 @@ import Pricing from '@/pages/Pricing/Pricing'
 import Membership from '@/pages/Membership/Membership'
 import ContactUs from '@/pages/Contact Us/ContactUs'
 import ProductGrid from '@/pages/Product Grid/ProductGrid'
+import ProductDetail from '@/pages/Product Detail/ProductDetail'
+import Cart from '@/pages/Cart/cart'
+import CheckoutPage from '@/pages/Checkout/checkoutPages'
 
 const AppRoutes = () => {
     return (
@@ -27,7 +30,7 @@ const AppRoutes = () => {
 
             <Route element={<MainLayout />}>
                 <Route
-                    path='/home'
+                    path='/'
                     element={<Home />}
                 />
 
@@ -41,6 +44,9 @@ const AppRoutes = () => {
                 <Route path='/contact-us' element={<ContactUs />} />
 
                 <Route path='/products-Grid' element={<ProductGrid />} />
+                <Route path='/products-detail/:id' element={<ProductDetail />} />
+                <Route path='/cart' element={<Cart />} />
+                <Route path='/checkout' element={<CheckoutPage />} />
             </Route>
         </Routes>
     )
