@@ -13,11 +13,11 @@ const CouponBox = ({ onApply }) => {
                     value={code}
                     onChange={(e) => setCode(e.target.value)}
                     placeholder="Enter Code"
-                    className="w-full max-w-[220px] rounded-lg border border-gray-200 px-4 py-2.5 text-sm outline-none focus:border-primary"
+                    className="w-full max-w-[220px] rounded-lg border border-border px-4 py-2.5 text-fluid-sm outline-none focus:border-primary"
                 />
                 <button
                     onClick={() => onApply(code)}
-                    className="rounded-lg bg-gray-900 px-6 py-2.5 text-sm font-semibold text-white"
+                    className="rounded-lg bg-foreground px-6 py-2.5 text-fluid-sm font-semibold text-primary-foreground"
                 >
                     Apply
                 </button>
@@ -25,7 +25,7 @@ const CouponBox = ({ onApply }) => {
 
             <button
                 onClick={() => setShowCoupons(true) }
-                className="mt-2 text-sm font-medium text-primary underline cursor-pointer">
+                className="mt-2 text-fluid-sm font-medium text-primary underline cursor-pointer">
                 View All Coupons
             </button>
 

@@ -50,14 +50,14 @@ export default function AddressInformation({
     };
 
     return (
-        <section className="border border-[#e4e4e4] bg-white p-5 shadow-sm">
-            <h2 className="mb-4 border-b border-[#e4e4e4] pb-3 font-['Oswald',sans-serif] text-lg font-semibold">
+        <section className="border border-border bg-background p-5 shadow-sm">
+            <h2 className="mb-4 border-b border-border pb-3 font-['Oswald',sans-serif] text-fluid-lg font-semibold">
                 Delivery Address
             </h2>
 
             {addresses.length > 0 && (
                 <fieldset className="mb-5 space-y-3">
-                    <legend className="mb-2 text-sm font-medium">
+                    <legend className="mb-2 text-fluid-sm font-medium">
                         Select an address
                     </legend>
                     {addresses.map((item) => (
@@ -65,8 +65,8 @@ export default function AddressInformation({
                             key={item._id}
                             className={`block cursor-pointer border p-3 ${
                                 selectedAddressId === item._id
-                                    ? "border-[#c4551a]"
-                                    : "border-[#e4e4e4]"
+                                    ? "border-primary"
+                                    : "border-border"
                             }`}
                         >
                             <span className="flex items-start gap-2">
@@ -76,9 +76,9 @@ export default function AddressInformation({
                                     value={item._id}
                                     checked={selectedAddressId === item._id}
                                     onChange={() => onSelect(item._id)}
-                                    className="mt-1 accent-[#c4551a]"
+                                    className="mt-1 accent-primary"
                                 />
-                                <span className="text-sm">
+                                <span className="text-fluid-sm">
                                     <strong className="block">{item.fullName}</strong>
                                     {item.addressLine1}
                                     {item.addressLine2 && `, ${item.addressLine2}`}
@@ -93,7 +93,7 @@ export default function AddressInformation({
                 </fieldset>
             )}
 
-            <h3 className="mb-3 text-sm font-semibold">Add a new address</h3>
+            <h3 className="mb-3 text-fluid-sm font-semibold">Add a new address</h3>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {fields.map((field) => (
                     <label
@@ -105,10 +105,10 @@ export default function AddressInformation({
                                 : ""
                         }`}
                     >
-                        <span className="mb-1 block text-xs font-medium">
+                        <span className="mb-1 block text-fluid-xs font-medium">
                             {field.label}
                             {field.required && (
-                                <span className="text-red-500"> *</span>
+                                <span className="text-destructive"> *</span>
                             )}
                         </span>
                         <input
@@ -117,21 +117,21 @@ export default function AddressInformation({
                             value={address[field.name]}
                             onChange={handleChange}
                             autoComplete={field.autoComplete}
-                            className="w-full rounded-sm border border-[#dcdcdc] px-3 py-2 text-sm outline-none focus:border-[#c4551a]"
+                            className="w-full rounded-sm border border-border-strong px-3 py-2 text-fluid-sm outline-none focus:border-primary"
                         />
                     </label>
                 ))}
             </div>
 
             {error && (
-                <p className="mt-3 text-sm text-red-600" role="alert">
+                <p className="mt-3 text-fluid-sm text-destructive" role="alert">
                     {error}
                 </p>
             )}
             <button
                 type="button"
                 onClick={handleAdd}
-                className="mt-4 rounded bg-[#1b1b1b] px-4 py-2 text-sm font-medium text-white hover:bg-[#333] focus-visible:outline-2 focus-visible:outline-[#c4551a] focus-visible:outline-offset-2"
+                className="mt-4 rounded bg-foreground px-4 py-2 text-fluid-sm font-medium text-primary-foreground hover:bg-foreground focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
             >
                 Add Address
             </button>

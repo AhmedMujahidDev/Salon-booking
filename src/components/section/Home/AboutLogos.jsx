@@ -36,15 +36,7 @@ const AboutLogos = () => {
                 <img
                   src={item}
                   alt={`Brand logo ${index + 1}`}
-                  className="
-                    max-h-20
-                    max-w-full
-                    object-contain
-                    opacity-80
-                    transition
-                    duration-300
-                    hover:opacity-100
-                  "
+                  className="max-h-20 max-w-full object-contain opacity-80 transition duration-300 hover:opacity-100"
                 />
               </div>
 

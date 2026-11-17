@@ -6,14 +6,14 @@ import expert8 from"../../../assets/images/expert-img-08.jpg"
 
 const ExpertCard = () => {
   return (
-        <div className=' mt-10 container-custom'>
+        <div className='mt-10 container-custom'>
             <div>
                 <div className='flex justify-between items-center gap-5'>
                     {ExpertData.map((items, index)=>(
                         <div key={index} className='flex flex-col items-center gap-2 transition-transform duration-500 hover:scale-105'>
                             <img src={items.img} alt={items.title} className='rounded-md w-full' />
-                            <h2 className='text-2xl font-bold'>{items.title}</h2>
-                            <p className='text-base'>{items.role}</p>
+                            <h2 className='text-fluid-2xl font-bold'>{items.title}</h2>
+                            <p className='text-fluid-base'>{items.role}</p>
                         </div>
                     ))}
                 </div>

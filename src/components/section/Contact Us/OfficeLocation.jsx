@@ -10,7 +10,7 @@ const OfficeLocation = () => {
             }}>
             <div className='container-custom'>
                 <div className='flex justify-center mb-10'>
-                    <h2 className='text-background text-3xl font-bold'>Our Office Locations</h2>
+                    <h2 className='text-background text-fluid-3xl font-bold'>Our Office Locations</h2>
                 </div>
                 <div className="flex flex-wrap justify-center gap-5">
                     {LocationDetail.map((item, index) => {
@@ -21,7 +21,7 @@ const OfficeLocation = () => {
                                     <Icon className='h-7 w-7 text-primary' />
                                 </div>
                                 <div>
-                                    <h3 className='text-xl font-bold text-foreground'>{item.location}</h3>
+                                    <h3 className='text-fluid-xl font-bold text-foreground'>{item.location}</h3>
                                     <p className='mt-1 text-muted-foreground'>{item.address}</p>
                                 </div>
                             </div>

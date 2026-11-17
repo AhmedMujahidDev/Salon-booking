@@ -13,7 +13,7 @@ const Banner = ({
             }}>
             <div className='absolute inset-0' />
             <div className='relative z-10 flex h-full flex-col items-center justify-center px-4'>
-                <div className='flex items-center gap-2 rounded-sm bg-black/20 px-4 py-3 text-sm font-semibold text-white/80 md:text-base'>
+                <div className='flex items-center gap-2 rounded-sm bg-foreground/20 px-4 py-3 text-fluid-sm font-semibold text-primary-foreground/80'>
 
                     <House size={17} className='hover:text-primary' />
 
@@ -29,7 +29,7 @@ const Banner = ({
                     ))}
                 </div>
 
-                <h1 className='mt-7 font-heading text-5xl font-black text-white md:text-6xl'>
+                <h1 className='mt-7 font-heading text-fluid-4xl font-black text-primary-foreground'>
                     {title}
                 </h1>
             </div>

@@ -5,14 +5,14 @@ const ContactDetail = () => {
   return (
     <section className='section-padding'>
       <div>
-        <h3 className='font-bold text-3xl'>Need help? Contact us</h3>
+        <h3 className='font-bold text-fluid-3xl'>Need help? Contact us</h3>
         <p className='text-foreground'>If you have any questions or need assistance with Chat assist our dedicated team is here.</p>
       </div>
 
       <div className='flex gap-3 mt-6'>
         <div className='flex items-start gap-4'>
           <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-border bg-foreground">
-            <Phone color='white' />
+            <Phone color='var(--primary-foreground)' />
           </div>
 
         </div>
@@ -20,7 +20,7 @@ const ContactDetail = () => {
           <h3 className="font-semibold text-foreground">
             Phone
           </h3>
-          <p className="text-base mt-1 text-muted-foreground font-medium">
+          <p className="text-fluid-base mt-1 text-muted-foreground font-medium">
             +81649 48103 / +78301 71940
           </p>
         </div>
@@ -29,7 +29,7 @@ const ContactDetail = () => {
       <div className='flex gap-3 mt-6'>
         <div className='flex items-start gap-4'>
           <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-border bg-foreground">
-            <Mail color='white' />
+            <Mail color='var(--primary-foreground)' />
           </div>
 
         </div>
@@ -37,7 +37,7 @@ const ContactDetail = () => {
           <h3 className="font-semibold text-foreground">
             Email
           </h3>
-          <p className="text-base mt-1 text-muted-foreground font-medium">
+          <p className="text-fluid-base mt-1 text-muted-foreground font-medium">
             info@example.com / corporate@example.com
           </p>
         </div>
@@ -46,7 +46,7 @@ const ContactDetail = () => {
       <div className='flex gap-3 mt-6'>
         <div className='flex items-start gap-4'>
           <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-border bg-foreground">
-            <MapPinCheck color='white' />
+            <MapPinCheck color='var(--primary-foreground)' />
           </div>
 
         </div>
@@ -54,7 +54,7 @@ const ContactDetail = () => {
           <h3 className="font-semibold text-foreground">
             Address
           </h3>
-          <p className="text-base mt-1 text-muted-foreground font-medium">
+          <p className="text-fluid-base mt-1 text-muted-foreground font-medium">
             509 Rosewood Drive, California, United States
           </p>
         </div>

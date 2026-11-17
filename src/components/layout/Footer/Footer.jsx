@@ -5,7 +5,7 @@ import FooterBottom from '../Footer/FooterBottom'
 
 const Footer = () => {
   return (
-    <footer className='bg-[#171212] text-white'>
+    <footer className='bg-foreground text-primary-foreground'>
         <FooterTop/>
          <FooterMain />
          <FooterBottom />

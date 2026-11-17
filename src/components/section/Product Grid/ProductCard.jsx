@@ -19,10 +19,10 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className='group'>
-      <div className='relative cursor-pointer overflow-hidden bg-gray-50'>
+      <div className='relative cursor-pointer overflow-hidden bg-muted'>
         <Link to={`/products-detail/${product.id}`}>
           {product.discount > 0 && (
-            <span className='absolute left-2 top-2 z-10 bg-red-500 px-2 py-1 text-xs font-medium text-white'>
+            <span className='absolute left-2 top-2 z-10 bg-destructive px-2 py-1 text-fluid-xs font-medium text-primary-foreground'>
               {product.discount}% OFF
             </span>
           )}
@@ -35,7 +35,7 @@ const ProductCard = ({ product }) => {
 
         <Link
             to={`/products-detail/${product.id}`}
-            className="absolute p-2 right-0 top-30 z-10 translate-x-full bg-white rounded-2xl hover:bg-accent-foreground transition-transform duration-300 group-hover:-translate-x-2 ">
+            className="absolute p-2 right-0 top-30 z-10 translate-x-full bg-background rounded-2xl hover:bg-accent-foreground transition-transform duration-300 group-hover:-translate-x-2">
             <Eye
               size={20} />
         </Link>
@@ -43,11 +43,11 @@ const ProductCard = ({ product }) => {
         <button
             type='button'
             onClick={() => setIsLiked(!isLiked)}
-            className="absolute p-2 right-0 top-42 z-10 translate-x-full bg-white rounded-2xl transition-transform duration-300 group-hover:-translate-x-2 cursor-pointer">
+            className="absolute p-2 right-0 top-42 z-10 translate-x-full bg-background rounded-2xl transition-transform duration-300 group-hover:-translate-x-2 cursor-pointer">
             <Heart
               size={20}
               className={
-                isLiked ? "fill-red-500 text-red-500" : "text-gray-500 hover:text-accent-foreground "
+                isLiked ? "fill-destructive text-destructive" : "text-muted-foreground hover:text-accent-foreground "
               } />
         </button>
 
@@ -55,7 +55,7 @@ const ProductCard = ({ product }) => {
           type="button"
           onClick={handleAddToCart}
           disabled={pending}
-          className="absolute bottom-0 left-0 flex w-full translate-y-full items-center justify-center gap-2 bg-accent-foreground py-5 text-sm font-bold text-white transition-transform duration-300 group-hover:translate-y-0 cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
+          className="absolute bottom-0 left-0 flex w-full translate-y-full items-center justify-center gap-2 bg-accent-foreground py-5 text-fluid-sm font-bold text-primary-foreground transition-transform duration-300 group-hover:translate-y-0 cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
         >
           <ShoppingCart />
           {pending ? 'Adding...' : 'Add To Cart'}
@@ -63,7 +63,7 @@ const ProductCard = ({ product }) => {
       </div>
 
       {cartMessage && (
-        <p className="mt-2 text-sm" role="status">{cartMessage}</p>
+        <p className="mt-2 text-fluid-sm" role="status">{cartMessage}</p>
       )}
 
       <div className='mt-3 flex items-center gap-1'>
@@ -73,26 +73,26 @@ const ProductCard = ({ product }) => {
             size={16}
             className={
               star <= product.rating
-                ? "fill-yellow-400"
-                : "text-gray-300"} />
+                ? "fill-warning"
+                : "text-border-strong"} />
         ))}
 
-        <span className='ml-1 text-xs font-bold'>
+        <span className='ml-1 text-fluid-xs font-bold'>
           {product.rating}.0
         </span>
       </div>
 
-      <h3 className="mt-1 text-xl font-bold text-gray-900">
+      <h3 className="mt-1 text-fluid-xl font-bold text-foreground">
         {product.name}
       </h3>
 
       <div className="mt-1 flex items-center gap-2">
-        <span className="text-lg font-bold">
+        <span className="text-fluid-lg font-bold">
           ${product.price}
         </span>
 
         {product.originalPrice > product.price && (
-          <span className="text-sm font-bold  text-gray-700 line-through">
+          <span className="text-fluid-sm font-bold text-text-secondary line-through">
             ${product.originalPrice}
           </span>
         )}

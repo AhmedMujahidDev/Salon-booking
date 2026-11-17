@@ -16,8 +16,8 @@ function CartItem({ item, currency, disabled, onQuantity, onRemove }) {
     const [imageFailed, setImageFailed] = useState(false);
 
     return (
-        <li className="grid grid-cols-[64px_minmax(0,1fr)] min-[481px]:grid-cols-[72px_minmax(0,1fr)_auto] gap-x-4 gap-y-3 border-b border-[#e4e4e4] py-4">
-            <div className="grid w-16 h-18 min-[72px]:w-18 min-[481px]:h-20 place-items-center overflow-hidden border border-[#e4e4e4] bg-[#fafafa] text-2xl font-['Oswald',sans-serif] text-[#6b6b6b]">
+        <li className="grid grid-cols-[64px_minmax(0,1fr)] min-[481px]:grid-cols-[72px_minmax(0,1fr)_auto] gap-x-4 gap-y-3 border-b border-border py-4">
+            <div className="grid w-16 h-18 min-[72px]:w-18 min-[481px]:h-20 place-items-center overflow-hidden border border-border bg-surface-soft text-fluid-2xl font-['Oswald',sans-serif] text-text-muted">
                 {item.image && !imageFailed ? (
                     <img
                         src={item.image}
@@ -31,25 +31,25 @@ function CartItem({ item, currency, disabled, onQuantity, onRemove }) {
             </div>
 
             <div>
-                <h3 className="mb-1 text-[15px] font-semibold">{item.name}</h3>
-                <p className="m-0 text-xs text-[#6b6b6b]">
-                    Category: <strong className="font-medium text-[#1b1b1b]">{item.category}</strong>
+                <h3 className="mb-1 text-fluid-base font-semibold">{item.name}</h3>
+                <p className="m-0 text-fluid-xs text-text-muted">
+                    Category: <strong className="font-medium text-foreground">{item.category}</strong>
                     {item.variant && (
                         <>
                             <span className="mx-2">|</span>
                             {item.variant.label}:{" "}
-                            <strong className="font-medium text-[#1b1b1b]">{item.variant.value}</strong>
+                            <strong className="font-medium text-foreground">{item.variant.value}</strong>
                         </>
                     )}
                 </p>
-                <p className="mt-3 text-base font-medium">
+                <p className="mt-3 text-fluid-base font-medium">
                     {formatMoney(item.unitPrice * item.quantity, currency)}
                 </p>
             </div>
 
             <div className="col-span-2 flex flex-row items-center justify-between gap-3 min-[481px]:col-span-1 min-[481px]:flex-col min-[481px]:items-end min-[481px]:justify-start">
                 <div
-                    className="inline-flex items-center rounded border border-[#e4e4e4]"
+                    className="inline-flex items-center rounded border border-border"
                     role="group"
                     aria-label={`Quantity for ${item.name}`}
                 >
@@ -58,7 +58,7 @@ function CartItem({ item, currency, disabled, onQuantity, onRemove }) {
                         onClick={() => onQuantity(item.id, item.quantity - 1)}
                         disabled={disabled || item.quantity <= 1}
                         aria-label="Decrease quantity"
-                        className="grid size-[30px] place-items-center cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-[#c4551a] focus-visible:outline-offset-2"
+                        className="grid size-[30px] place-items-center cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
                     >
                         <FiMinus />
                     </button>
@@ -70,7 +70,7 @@ function CartItem({ item, currency, disabled, onQuantity, onRemove }) {
                         onClick={() => onQuantity(item.id, item.quantity + 1)}
                         disabled={disabled || item.quantity >= item.maxQuantity}
                         aria-label="Increase quantity"
-                        className="grid size-[30px] place-items-center cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-[#c4551a] focus-visible:outline-offset-2"
+                        className="grid size-[30px] place-items-center cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
                     >
                         <FiPlus />
                     </button>
@@ -80,7 +80,7 @@ function CartItem({ item, currency, disabled, onQuantity, onRemove }) {
                     onClick={() => onRemove(item.id)}
                     disabled={disabled}
                     aria-label={`Remove ${item.name}`}
-                    className="grid size-7.5 place-items-center rounded bg-[#fdeceb] text-[#e5312b] cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-[#c4551a] focus-visible:outline-offset-2"
+                    className="grid size-7.5 place-items-center rounded bg-danger-surface text-destructive cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
                 >
                     <FiTrash2 />
                 </button>
@@ -105,10 +105,10 @@ export default function CartPage({ onCheckout = () => { }, shopHref = "/" }) {
     } = useCart();
 
     const pageClass =
-        "mx-auto max-w-[1080px] px-5 pt-10 pb-16 font-['Poppins',system-ui,sans-serif] text-sm text-[#1b1b1b]";
-    const stateClass = "py-12 text-center text-[#6b6b6b]";
+        "mx-auto max-w-[1080px] px-5 pt-10 pb-16 font-['Poppins',system-ui,sans-serif] text-fluid-sm text-foreground";
+    const stateClass = "py-12 text-center text-text-muted";
     const buttonClass =
-        "inline-block mt-3 rounded bg-[#c4551a] px-6 py-[13px] font-semibold text-white hover:bg-[#a74614] focus-visible:outline-2 focus-visible:outline-[#c4551a] focus-visible:outline-offset-2";
+        "inline-block mt-3 rounded bg-primary px-6 py-[13px] font-semibold text-primary-foreground hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2";
 
     if (status === "loading") {
         return (
@@ -136,7 +136,7 @@ export default function CartPage({ onCheckout = () => { }, shopHref = "/" }) {
     if (cart.items.length === 0) {
         return (
             <main className={pageClass}>
-                <h1 className="mb-5 font-['Oswald',sans-serif] text-[28px] font-semibold tracking-[.01em]">
+                <h1 className="mb-5 font-['Oswald',sans-serif] text-fluid-2xl font-semibold tracking-[.01em]">
                     Cart Summary
                 </h1>
                 <div className={stateClass}>
@@ -151,28 +151,28 @@ export default function CartPage({ onCheckout = () => { }, shopHref = "/" }) {
 
     return (
         <main className={pageClass}>
-            <h1 className="mb-5 font-['Oswald',sans-serif] text-[28px] font-semibold tracking-[.01em]">
+            <h1 className="mb-5 font-['Oswald',sans-serif] text-fluid-2xl font-semibold tracking-[.01em]">
                 Cart Summary
             </h1>
 
             <div className="grid grid-cols-1 items-start gap-7 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-10">
                 <section aria-label="Items in your cart">
-                    <div className="flex items-center justify-between border-b border-[#e4e4e4] pb-3">
-                        <h2 className="font-['Oswald',sans-serif] text-xl font-semibold tracking-[.01em]">
+                    <div className="flex items-center justify-between border-b border-border pb-3">
+                        <h2 className="font-['Oswald',sans-serif] text-fluid-xl font-semibold tracking-[.01em]">
                             Total Items({String(cart.itemCount).padStart(2, "0")})
                         </h2>
                         <button
                             type="button"
                             onClick={clear}
                             disabled={pending}
-                            className="inline-flex items-center gap-1 py-1 text-xs text-[#e5312b] cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-[#c4551a] focus-visible:outline-offset-2"
+                            className="inline-flex items-center gap-1 py-1 text-fluid-xs text-destructive cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
                         >
                             <FiX aria-hidden="true" /> Clear Cart
                         </button>
                     </div>
 
                     {actionError && (
-                        <p className="mt-3 rounded bg-[#fdeceb] px-3 py-2.5 text-[13px] text-[#e5312b]" role="alert">
+                        <p className="mt-3 rounded bg-danger-surface px-3 py-2.5 text-fluid-sm text-destructive" role="alert">
                             {actionError}
                         </p>
                     )}

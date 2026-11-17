@@ -48,12 +48,12 @@ const BookingSlot = ({ open, onOpenChange, selectedService, onContinue }) => {
                 className="w-full overflow-y-auto p-6 sm:max-w-xl md:max-w-2xl"
             >
                 <SheetHeader className="mb-2 p-0">
-                    <SheetTitle className="text-xl font-bold text-gray-900">
+                    <SheetTitle className="text-fluid-xl font-bold text-foreground">
                         Time & Date
                     </SheetTitle>
                 </SheetHeader>
 
-                <h3 className="mb-3 mt-6 text-base font-bold text-gray-900">
+                <h3 className="mb-3 mt-6 text-fluid-base font-bold text-foreground">
                     Choose Date & Time
                 </h3>
                 <DateCarousel
@@ -63,7 +63,7 @@ const BookingSlot = ({ open, onOpenChange, selectedService, onContinue }) => {
                 />
 
                 <div className="mt-6 flex items-center justify-between">
-                    <h3 className="text-base font-bold text-gray-900">Choose Slot</h3>
+                    <h3 className="text-fluid-base font-bold text-foreground">Choose Slot</h3>
                     <SlotTabs active={activePeriod} onChange={setActivePeriod} />
                 </div>
                 <TimeSlots
@@ -73,16 +73,16 @@ const BookingSlot = ({ open, onOpenChange, selectedService, onContinue }) => {
                 />
 
                 <div className="mt-6 flex items-center gap-3">
-                    <h3 className="text-base font-bold text-gray-900">Services</h3>
-                    <span className="rounded-md border border-gray-200 px-2 py-0.5 text-xs text-gray-500">
+                    <h3 className="text-fluid-base font-bold text-foreground">Services</h3>
+                    <span className="rounded-md border border-border px-2 py-0.5 text-fluid-xs text-muted-foreground">
                         Services : {services.length}
                     </span>
-                    <span className="rounded-md border border-gray-200 px-2 py-0.5 text-xs text-gray-500">
+                    <span className="rounded-md border border-border px-2 py-0.5 text-fluid-xs text-muted-foreground">
                         Total Duration : 30 Mins
                     </span>
                     <button
                         onClick={() => setshowServices(true)}
-                        className="ml-auto text-sm font-semibold text-primary underline cursor-pointer">
+                        className="ml-auto text-fluid-sm font-semibold text-primary underline cursor-pointer">
                         Add Another Service
                     </button>
 

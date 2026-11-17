@@ -42,17 +42,17 @@ const WhatWeOffer = () => {
         <section className='section-padding bg-foreground'>
             <div className='container-custom'>
                 <div className='grid gap-12 px-6 md:grid-cols-[320px_1fr] md:items-start'>
-                    <div className="relative h-[500px] w-full overflow-hidden rounded-lg border border-primary">
+                    <div className="hidden sm:block relative h-[250px] w-full overflow-hidden rounded-lg border border-primary sm:h-[350px] md:h-[420px] lg:h-[500px]">
                         <img src={wellness} alt="wellness bg" />
                     </div>
 
                     {/* Right: hoverable list */}
                     <div>
-                        <h2 className="text-3xl font-bold text-white sm:text-4xl">
+                        <h2 className="text-fluid-3xl font-bold text-primary-foreground">
                             What We <span className="text-primary">Offer</span>
                         </h2>
 
-                        <div className="mt-2 divide-y divide-white/5">
+                        <div className="mt-2 divide-y divide-primary-foreground/5">
                             {services.map((service, i) => (
                                 <button
                                     key={service.title}
@@ -61,18 +61,18 @@ const WhatWeOffer = () => {
                                 >
                                     <div>
                                         <h3
-                                            className={`text-lg font-semibold transition-colors ${active === i ? "text-primary" : "text-white"
+                                            className={`text-fluid-lg font-semibold transition-colors ${active === i ? "text-primary" : "text-primary-foreground"
                                                 }`}
                                         >
                                             {service.title}
                                         </h3>
-                                        <p className="mt-1 text-sm text-white/50">
+                                        <p className="mt-1 text-fluid-sm text-primary-foreground/50">
                                             {service.description}
                                         </p>
                                     </div>
 
                                     {/* absolute positioned — row ki height ko affect nahi karega */}
-                                    <div className="absolute right-20 top-1/2 h-[100px] w-[140px] -translate-y-1/2 overflow-hidden rounded-md shadow-lg">
+                                    <div className="absolute right-20 top-1/2 hidden h-[100px] w-[140px] -translate-y-1/2 overflow-hidden rounded-md shadow-lg sm:block">
                                         <AnimatePresence mode="wait">
                                             {active === i && (
                                                 <motion.img
@@ -89,7 +89,7 @@ const WhatWeOffer = () => {
                                         </AnimatePresence>
                                     </div>
 
-                                    <span className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-foreground hover:bg-primary cursor-pointer ">
+                                    <span className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-background text-foreground hover:bg-primary cursor-pointer">
                                         <ArrowUpRight size={16} />
                                     </span>
                                 </button>

@@ -7,9 +7,9 @@ const ServiceCategory = ({ title, items }) => {
             <Scissors
                 size={42}
                 strokeWidth={1}
-                className='absolute -right-3 top-0 text-gray-300' />
+                className='absolute -right-3 top-0 text-border-strong' />
 
-            <h3 className='pr-14 font-heading text-4xl font-bold text-primary md:text-3xl'>
+            <h3 className='pr-14 font-heading text-fluid-4xl font-bold text-primary'>
                 {title}
             </h3>
 
@@ -18,16 +18,16 @@ const ServiceCategory = ({ title, items }) => {
                     <div key={servicesoffer.name}
                         className='flex items-start justify-between gap-6'>
                         <div>
-                            <h4 className='font-heading text-xl font-bold text-foreground md:text-2xl'>
+                            <h4 className='font-heading text-fluid-2xl font-bold text-foreground'>
                                 {servicesoffer.name}
                             </h4>
 
-                            <p className='mt-1 text-sm leading-5 text-gray-500 md:text-sm'>
+                            <p className='mt-1 text-fluid-sm leading-5 text-muted-foreground'>
                                 {servicesoffer.description}
                             </p>
                         </div>
 
-                        <span className='shrink-0 pt-1 font-heading text-xl font-bold text-foreground'>
+                        <span className='shrink-0 pt-1 font-heading text-fluid-xl font-bold text-foreground'>
                             {servicesoffer.price}
                         </span>
                     </div>  

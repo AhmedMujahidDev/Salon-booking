@@ -52,7 +52,7 @@ const MembershipFaq = () => {
                             you enjoy premium salon services with added convenience."
                     dark={false} />
 
-                <div className=" mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+                <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
 
                     {/* Left Side - First 4 FAQs */}
                     <Accordion type="single" collapsible className="w-full">
@@ -60,9 +60,9 @@ const MembershipFaq = () => {
                             <AccordionItem
                                 key={index}
                                 value={`left-${index}`}
-                                className="mb-4 rounded-md border px-5 transition-all duration-300 data-open:bg-black data-open:text-white cursor-pointer"
+                                className="mb-4 rounded-md border px-5 transition-all duration-300 data-open:bg-foreground data-open:text-primary-foreground cursor-pointer"
                             >
-                                <AccordionTrigger className="py-6 text-lg font-bold hover:no-underline">
+                                <AccordionTrigger className="py-6 text-fluid-lg font-bold hover:no-underline">
                                     {faq.question}
                                 </AccordionTrigger>
 
@@ -79,9 +79,9 @@ const MembershipFaq = () => {
                             <AccordionItem
                                 key={index}
                                 value={`right-${index}`}
-                                className="mb-4 rounded-md border px-5 transition-all duration-300 data-open:bg-black data-open:text-white cursor-pointer"
+                                className="mb-4 rounded-md border px-5 transition-all duration-300 data-open:bg-foreground data-open:text-primary-foreground cursor-pointer"
                             >
-                                <AccordionTrigger className="py-6 text-lg font-bold hover:no-underline">
+                                <AccordionTrigger className="py-6 text-fluid-lg font-bold hover:no-underline">
                                     {faq.question}
                                 </AccordionTrigger>
 

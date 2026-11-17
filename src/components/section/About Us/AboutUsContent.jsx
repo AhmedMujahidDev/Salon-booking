@@ -5,11 +5,11 @@ import AboutFeatureCard from '../Home/AboutFeatureCard'
 const AboutUsContent = () => {
     return (
         <div>
-            <h2 className='max-w-xl text-3xl font-black leading-tight text-foreground md:text-4xl'>
+            <h2 className='max-w-xl text-fluid-3xl font-black leading-tight text-foreground'>
                 Your Ultimate One Stop Salon Management Solution
             </h2>
 
-            <p className='mt-4 max-w-2xl text-sm leading-6 text-gray-600'>
+            <p className='mt-4 max-w-2xl text-fluid-sm leading-6 text-text-secondary'>
                Our salon is dedicated to providing modern grooming services designed for today’s stylish and confident men. We combine professional expertise, quality products, and a comfortable atmosphere to deliver a premium grooming experience for every client.
             </p>
 
@@ -26,7 +26,7 @@ const AboutUsContent = () => {
                     icon={CircleDot}
                     title="Modern Approach"
                     description="We are expertise in modern hairstyles, fades, classic cuts, and beard shaping."
-                    iconColor="bg-gray-900"
+                    iconColor="bg-foreground"
                     layout="icon-left"
                 />
 

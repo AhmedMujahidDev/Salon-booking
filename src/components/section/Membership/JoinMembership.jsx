@@ -20,7 +20,7 @@ const JoinMembership = () => {
                     {membership.map((member, index) => (
                         <div
                             key={index}
-                            className='p-4 border border-gray-200 rounded-sm sm:gap-6'>
+                            className='p-4 border border-border rounded-sm sm:gap-6'>
 
                             <div className='flex h-16 w-16 shrink-0 items-center justify-center rounded-sm bg-primary sm:h-16 sm:w-16'>
                                 <img
@@ -30,13 +30,13 @@ const JoinMembership = () => {
                             </div>
 
                             <div className='mt-4'>
-                                <h3 className='font-bold text-2xl'>
+                                <h3 className='font-bold text-fluid-2xl'>
                                     {member.title}
                                 </h3>
                             </div>
 
                             <div className='mt-1'>
-                                <p className='text-gray-600'>
+                                <p className='text-text-secondary'>
                                     {member.detail}
                                 </p>
                             </div>

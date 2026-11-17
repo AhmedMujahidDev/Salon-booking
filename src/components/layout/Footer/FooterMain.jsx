@@ -13,7 +13,7 @@ const FooterMain = () => {
     return (
         <section className='section-padding'>
             <div className='container-custom'>
-                <div className='grid gap-14 lg:grid-cols-[2fr_1fr_1fr_1fr]'>
+                <div className='grid gap-14 md:grid-cols-2 xl:grid-cols-[2fr_1fr_1fr_1fr]'>
                     <div className='flex flex-col items-center md:items-start'>
 
                         <div className='bg-cover bg-center bg-no-repeat pt-10'
@@ -23,25 +23,25 @@ const FooterMain = () => {
                             <img src={Logo} alt="DreamSalon" className='h-14 w-auto' />
                         </div>
 
-                        <p className="mt-8 md:max-w-md leading-8 text-white/70">
+                        <p className="mt-8 md:max-w-md leading-8 text-primary-foreground/70">
                             We combine modern techniques with classic grooming
                             traditions to ensure every client receives.
                         </p>
 
-                        <h3 className="mt-12 text-2xl sm:text-3xl font-bold">
+                        <h3 className="mt-12 text-fluid-3xl font-bold">
                             Subscribe for Newsletter
                         </h3>
 
-                        <form className='flex sm:w-full items-center mt-6 overflow-hidden rounded-lg border border-white/10 '>
+                        <form className='flex sm:w-full items-center mt-6 overflow-hidden rounded-lg border border-primary-foreground/10'>
 
                             <input
                                 type="email"
                                 placeholder='Email Address'
-                                className='min-w-0 flex-1 bg-transparent px-3 py-4 sm:px-5 sm:py-4 text-white placeholder:text-white/40 focus:outline-none' />
+                                className='min-w-0 flex-1 bg-transparent px-3 py-4 sm:px-5 sm:py-4 text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none' />
 
                             <button
                                 type='submit'
-                                className=" bg-primary px-3 py-4 sm:px-6 sm:py-2 rounded-sm font-semibold shrink-0 text-white transition hover:opacity-90 "
+                                className="bg-primary px-3 py-4 sm:px-6 sm:py-2 rounded-sm font-semibold shrink-0 text-primary-foreground transition hover:opacity-90"
                             >
                                 Subscribe
                             </button>
@@ -51,7 +51,7 @@ const FooterMain = () => {
                     {/* <div className='flex gap-20 justify-center'> */}
                     <div>
 
-                        <h3 className="mb-8 text-3xl font-bold">
+                        <h3 className="mb-8 text-fluid-3xl font-bold">
                             Quick Links
                         </h3>
 
@@ -75,7 +75,7 @@ const FooterMain = () => {
 
                     <div>
 
-                        <h3 className="mb-8 text-3xl font-bold">
+                        <h3 className="mb-8 text-fluid-3xl font-bold">
                             Company
                         </h3>
 
@@ -100,7 +100,7 @@ const FooterMain = () => {
                     </div>
                     <div>
 
-                        <h3 className="mb-8 text-3xl font-bold">
+                        <h3 className="mb-8 text-fluid-3xl font-bold">
                             Working Hours
                         </h3>
 
@@ -108,14 +108,14 @@ const FooterMain = () => {
 
                             <p>
                                 MON - FRI
-                                <span className="ml-2 text-white/70">
+                                <span className="ml-2 text-primary-foreground/70">
                                     9:30 AM - 7:30 PM
                                 </span>
                             </p>
 
                             <p>
                                 SAT - SUN
-                                <span className="ml-2 text-white/70">
+                                <span className="ml-2 text-primary-foreground/70">
                                     7:30 AM - 9:30 PM
                                 </span>
                             </p>
@@ -126,28 +126,28 @@ const FooterMain = () => {
 
                             <a
                                 href="#"
-                                className="flex h-12 w-12 items-center justify-center rounded-full bg-white/5 transition hover:bg-primary"
+                                className="flex h-12 w-12 items-center justify-center rounded-full bg-background/5 transition hover:bg-primary"
                             >
                                 <FaFacebookF size={18} />
                             </a>
 
                             <a
                                 href="#"
-                                className="flex h-12 w-12 items-center justify-center rounded-full bg-white/5 transition hover:bg-primary"
+                                className="flex h-12 w-12 items-center justify-center rounded-full bg-background/5 transition hover:bg-primary"
                             >
                                 <FaLinkedinIn size={18} />
                             </a>
 
                             <a
                                 href="#"
-                                className="flex h-12 w-12 items-center justify-center rounded-full bg-white/5 transition hover:bg-primary"
+                                className="flex h-12 w-12 items-center justify-center rounded-full bg-background/5 transition hover:bg-primary"
                             >
                                 <FaYoutube size={18} />
                             </a>
 
                             <a
                                 href="#"
-                                className="flex h-12 w-12 items-center justify-center rounded-full bg-white/5 transition hover:bg-primary"
+                                className="flex h-12 w-12 items-center justify-center rounded-full bg-background/5 transition hover:bg-primary"
                             >
                                 <FaInstagram size={18} />
                             </a>

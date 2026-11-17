@@ -5,21 +5,23 @@ import about03 from "../../../assets/images/about-03.jpg"
 
 const AboutImages = () => {
   return (
-    <div className='flex items-center justify-center gap-5'>
+    <div className='hidden lg:block'>
+      <div className='grid grid-cols-3 items-center gap-5'>
         <img 
         src={about01} 
         alt="Barber grooming"
-        className='h-[420px] w-[160px] rounded-sm object-cover' />
+        className='aspect-[8/21] w-full min-w-0 rounded-sm object-cover' />
 
         <img 
         src={about02} 
         alt="Professional barber"
-        className='mt-14 h-[420px] w-[160px] rounded-sm object-cover' />
+        className='mt-14 aspect-[8/21] w-full min-w-0 rounded-sm object-cover' />
 
         <img 
         src={about03} 
         alt="Barber service"
-        className='h-[420px] w-[160px] rounded-sm object-cover' />
+        className='aspect-[8/21] w-full min-w-0 rounded-sm object-cover' />
+      </div>
     </div>
   )
 }

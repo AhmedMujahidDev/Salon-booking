@@ -12,11 +12,11 @@ const DateCarousel = ({ dates, selectedDate, onSelect, onPrev, onNext }) => {
                         <button
                             key={`${d.month}-${d.day}`}
                             onClick={() => onSelect(d)}
-                            className={`flex min-w-[80px] flex-col items-center rounded-lg border px-3 py-2.5 text-center transition-colors ${isActive ? "border-primary border-[1px]" : "border-gray-200"
+                            className={`flex min-w-[80px] flex-col items-center rounded-lg border px-3 py-2.5 text-center transition-colors ${isActive ? "border-primary border-[1px]" : "border-border"
                                 }`}>
-                            <span className='text-xs text-gray-500'>{d.month}</span>
-                            <span className='my-0.5 text-xl font-bold text-gray-900'>{d.day}</span>
-                            <span className='text-xs text-gray-500'>{d.weekday}</span>
+                            <span className='text-fluid-xs text-muted-foreground'>{d.month}</span>
+                            <span className='my-0.5 text-fluid-xl font-bold text-foreground'>{d.day}</span>
+                            <span className='text-fluid-xs text-muted-foreground'>{d.weekday}</span>
                         </button>
                     )
                 })}

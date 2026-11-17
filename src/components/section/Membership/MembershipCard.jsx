@@ -4,11 +4,11 @@ import React from 'react'
 const MembershipCard = ({ Membership }) => {
     return (
         <div className='h-full mt-10 flex flex-col justify-center items-center hover:'>{Membership.popular && (
-            <span className=" rounded bg-primary px-3 py-1 text-xs font-semibold text-white">
+            <span className="rounded bg-primary px-3 py-1 text-fluid-xs font-semibold text-primary-foreground">
                 Most popular
             </span>
         )}
-            <div className="rounded-md border bg-white p-3 shadow-md">
+            <div className="rounded-md border bg-background p-3 shadow-md">
 
                 <div className="p-4">
 
@@ -20,26 +20,26 @@ const MembershipCard = ({ Membership }) => {
                                 alt={Membership.name}
                                 className='h-7 w-7 object-contain sm:h-10 sm:w-10' />
                         </div>
-                        <h3 className="font-heading text-xl font-bold">
+                        <h3 className="font-heading text-fluid-xl font-bold">
                             {Membership.name}
                         </h3>
                     </div>
 
                     <div className="flex flex-col items-center border-b border-dashed py-4">
-                        <h2 className="text-3xl font-bold">
+                        <h2 className="text-fluid-3xl font-bold">
                             ${Membership.price}
-                            <span className="ml-1 text-xs font-normal">
+                            <span className="ml-1 text-fluid-xs font-normal">
                                 / Month
                             </span>
                         </h2>
 
-                        <p className="pt-4 text-sm text-primary">
+                        <p className="pt-4 text-fluid-sm text-primary">
                             {Membership.description}
                         </p>
                     </div>
 
                     <div className="flex-1">
-                        <h3 className="mt-6 font-heading text-lg font-bold">
+                        <h3 className="mt-6 font-heading text-fluid-lg font-bold">
                             Includes
                         </h3>
 
@@ -47,7 +47,7 @@ const MembershipCard = ({ Membership }) => {
                             {Membership.features.map((feature, index) => (
                                 <div
                                     key={index}
-                                    className="flex items-center gap-2 text-sm text-gray-600"
+                                    className="flex items-center gap-2 text-fluid-sm text-text-secondary"
                                 >
                                     <ArrowUpRight
                                         size={14}
@@ -59,7 +59,7 @@ const MembershipCard = ({ Membership }) => {
                             ))}
                         </div>
 
-                        <button className="bg-foreground mt-6 w-full rounded py-3 text-sm font-bold text-white transition hover:bg-accent-foreground">
+                        <button className="bg-foreground mt-6 w-full rounded py-3 text-fluid-sm font-bold text-primary-foreground transition hover:bg-accent-foreground">
                             Join Now
                         </button>
 

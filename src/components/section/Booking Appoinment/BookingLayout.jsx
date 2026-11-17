@@ -48,20 +48,20 @@ const BookingLayout = ({
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent className="max-w-4xl p-0">
                 <div className="flex max-h-[80vh]">
-                    <div className="flex w-full flex-col bg-gray-50">
+                    <div className="flex w-full flex-col bg-muted">
 
-                        <div className="flex items-center gap-2 border-b border-gray-200 px-6 py-5">
+                        <div className="flex items-center gap-2 border-b border-border px-6 py-5">
                             <button
                                 onClick={onBack}
-                                className="group text-gray-700"
+                                className="group text-text-secondary"
                             >
                                 <ChevronLeft
                                     size={22}
-                                    className="cursor-pointer text-gray-700 hover:text-primary"
+                                    className="cursor-pointer text-text-secondary hover:text-primary"
                                 />
                             </button>
 
-                            <h2 className="cursor-pointer text-2xl font-bold text-gray-900 hover:text-primary">
+                            <h2 className="cursor-pointer text-fluid-2xl font-bold text-foreground hover:text-primary">
                                 Choose Services
                             </h2>
                         </div>

@@ -12,8 +12,8 @@ const WhoWeAre = () => {
             <div className='container-custom'>
 
                 <div className='flex flex-col justify-center items-center gap-2'>
-                    <h2 className='text-3xl font-bold text-white'>Who We Are</h2>
-                    <p className='text-base text-white'>Welcome to Dream Salon, where beauty meets expertise and every visit is a step toward confidence and self-care.</p>
+                    <h2 className='text-fluid-3xl font-bold text-primary-foreground'>Who We Are</h2>
+                    <p className='text-fluid-base text-primary-foreground'>Welcome to Dream Salon, where beauty meets expertise and every visit is a step toward confidence and self-care.</p>
                 </div>
 
                 <div className='mt-12'>
@@ -21,7 +21,7 @@ const WhoWeAre = () => {
                 </div>
 
                 <div className='flex justify-center items-center text-center mt-10'>
-                    <p className='text-white'>At our salon, we believe that looking your best begins with feeling your best. That’s why we’ve created a warm, inviting space where style, comfort, and personalized care come together. Whether you're here for a fresh haircut, a relaxing facial, or a bold new color, our experienced team is dedicated to helping you shine inside and out.</p>
+                    <p className='text-primary-foreground'>At our salon, we believe that looking your best begins with feeling your best. That’s why we’ve created a warm, inviting space where style, comfort, and personalized care come together. Whether you're here for a fresh haircut, a relaxing facial, or a bold new color, our experienced team is dedicated to helping you shine inside and out.</p>
                 </div>
 
                 <Values />

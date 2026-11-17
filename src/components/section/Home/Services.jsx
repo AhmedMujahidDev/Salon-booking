@@ -62,16 +62,16 @@ const groomingServices = [
 
 const Services = () => {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-background py-20">
       <div className="mx-auto max-w-6xl px-6">
 
         {/* Heading */}
         <div className="mb-12 text-center">
-          <span className="inline-flex items-center gap-3 rounded-full bg-primary px-4 py-1 text-sm font-semibold text-white">
+          <span className="inline-flex items-center gap-3 rounded-full bg-primary px-4 py-1 text-fluid-sm font-semibold text-primary-foreground">
             • Services •
           </span>
 
-          <h2 className="mt-3 text-3xl font-black text-foreground md:text-4xl">
+          <h2 className="mt-3 text-fluid-3xl font-black text-foreground">
             Our Signature Services
           </h2>
         </div>
@@ -80,7 +80,7 @@ const Services = () => {
         <div className="grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2">
 
           {/* LEFT TOP */}
-          <div className="overflow-hidden">
+          <div className="hidden sm:block overflow-hidden">
             <img
               src={haircutImage}
               alt="Haircut service"
@@ -101,7 +101,7 @@ const Services = () => {
           />
 
           {/* RIGHT BOTTOM */}
-          <div className="overflow-hidden">
+          <div className="hidden sm:block overflow-hidden">
             <img
               src={groomingImage}
               alt="Grooming service"

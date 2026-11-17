@@ -8,13 +8,13 @@ export default function BasicInformation({ customer, onChange }) {
     ];
 
     return (
-        <section className="border border-[#e4e4e4] bg-white p-5 shadow-sm">
-            <div className="mb-4 flex justify-between border-b border-[#e4e4e4] pb-3">
-                <h2 className="font-['Oswald',sans-serif] text-lg font-semibold">
+        <section className="border border-border bg-background p-5 shadow-sm">
+            <div className="mb-4 flex justify-between border-b border-border pb-3">
+                <h2 className="font-['Oswald',sans-serif] text-fluid-lg font-semibold">
                     Basic Information
                 </h2>
 
-                <button type="button" className="text-xs text-[#c4551a]">
+                <button type="button" className="text-fluid-xs text-primary">
                     Sign In
                 </button>
             </div>
@@ -22,8 +22,8 @@ export default function BasicInformation({ customer, onChange }) {
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {fields.map((field) => (
                     <label key={field.name} className="block">
-                        <span className="mb-1 block text-xs font-medium">
-                            {field.label} <span className="text-red-500">*</span>
+                        <span className="mb-1 block text-fluid-xs font-medium">
+                            {field.label} <span className="text-destructive">*</span>
                         </span>
 
                         <input
@@ -39,7 +39,7 @@ export default function BasicInformation({ customer, onChange }) {
                                     : field.name === "email"
                                         ? "email"
                                         : "tel"}
-                            className="w-full rounded-sm border border-[#dcdcdc] px-3 py-2 text-sm outline-none focus:border-[#c4551a]"
+                            className="w-full rounded-sm border border-border-strong px-3 py-2 text-fluid-sm outline-none focus:border-primary"
                         />
                     </label>
                 ))}

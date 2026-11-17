@@ -65,8 +65,8 @@ const ProductDetailCard = () => {
         return (
             <div className="min-h-[60vh] flex items-center justify-center">
                 <div className="text-center">
-                    <h1 className="text-3xl font-bold">Product Not Found</h1>
-                    <p className="text-gray-500 mt-2">
+                    <h1 className="text-fluid-3xl font-bold">Product Not Found</h1>
+                    <p className="text-muted-foreground mt-2">
                         The product you're looking for doesn't exist.
                     </p>
                 </div>
@@ -137,9 +137,9 @@ const ProductDetailCard = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     {/* LEFT: IMAGES */}
                     <div>
-                        <div className="relative bg-gray-50 h-[500px] flex items-center justify-center">
+                        <div className="relative bg-muted h-[500px] flex items-center justify-center">
                             {product.discount > 0 && (
-                                <span className="absolute top-4 left-0 bg-red-500 rounded-r-2xl text-white text-sm px-3 py-1">
+                                <span className="absolute top-4 left-0 bg-destructive rounded-r-2xl text-primary-foreground text-fluid-sm px-3 py-1">
                                     {product.discount}% OFF
                                 </span>
                             )}
@@ -151,7 +151,7 @@ const ProductDetailCard = () => {
                                     className="max-h-[450px] max-w-full object-contain"
                                 />
                             ) : (
-                                <p className="text-gray-500">No image available</p>
+                                <p className="text-muted-foreground">No image available</p>
                             )}
                         </div>
 
@@ -163,9 +163,9 @@ const ProductDetailCard = () => {
                                     onClick={() => setSelectedImage(index)}
                                     aria-label={`View image ${index + 1}`}
                                     aria-pressed={selectedImage === index}
-                                    className={`w-40 h-40 p-2 bg-gray-50 ${selectedImage === index
-                                        ? "bg-gray-100"
-                                        : "border-gray-200"
+                                    className={`w-40 h-40 p-2 bg-muted ${selectedImage === index
+                                        ? "bg-secondary"
+                                        : "border-border"
                                         }`}
                                 >
                                     <img
@@ -180,22 +180,22 @@ const ProductDetailCard = () => {
 
                     {/* RIGHT: PRODUCT INFO */}
                     <div>
-                        <span className="inline-block bg-black text-white rounded-sm text-sm px-3 py-1 mb-3">
+                        <span className="inline-block bg-foreground text-primary-foreground rounded-sm text-fluid-sm px-3 py-1 mb-3">
                             {product.type}
                         </span>
 
-                        <h1 className="text-3xl font-bold">{product.name}</h1>
+                        <h1 className="text-fluid-3xl font-bold">{product.name}</h1>
 
 
                         <div className="flex items-center justify-between gap-2 mt-3">
                             {/* Price */}
                             <div className="flex items-center gap-3 mt-3">
-                                <span className="text-3xl font-bold">
+                                <span className="text-fluid-3xl font-bold">
                                     ${product.price}
                                 </span>
 
                                 {product.originalPrice != null && (
-                                    <del className="text-gray-400">
+                                    <del className="text-muted-foreground">
                                         ${product.originalPrice}
                                     </del>
                                 )}
@@ -217,7 +217,7 @@ const ProductDetailCard = () => {
                                     ))}
                                 </div>
 
-                                <span className="text-lg">
+                                <span className="text-fluid-sm">
                                     {product.rating ?? 0} ({product.reviews ?? 0})
                                 </span>
                             </div>
@@ -225,18 +225,18 @@ const ProductDetailCard = () => {
 
                         {/* Stock */}
                         <div className="mt-3">
-                            <span className="bg-green-100 text-green-700 text-xs px-3 py-1">
+                            <span className="bg-success-surface text-success text-fluid-xs px-3 py-1">
                                 In Stock
                             </span>
                         </div>
 
                         {/* Short Description */}
                         <div className="border-t border-b py-5 my-5">
-                            <h3 className="font-bold text-lg mb-2">
+                            <h3 className="font-bold text-fluid-lg mb-2">
                                 Short Description:
                             </h3>
 
-                            <p className="text-gray-600 leading-7">
+                            <p className="text-text-secondary leading-7">
                                 {product.shortDescription ||
                                     "No short description available."}
                             </p>
@@ -256,9 +256,9 @@ const ProductDetailCard = () => {
                                             type="button"
                                             onClick={() => setSelectedColor(color)}
                                             aria-pressed={selectedColor === color}
-                                            className={`border px-4 py-2 text-sm ${selectedColor === color
-                                                ? "border-black"
-                                                : "border-gray-300"
+                                            className={`border px-4 py-2 text-fluid-sm ${selectedColor === color
+                                                ? "border-foreground"
+                                                : "border-border-strong"
                                                 }`}
                                         >
                                             {color}
@@ -270,7 +270,7 @@ const ProductDetailCard = () => {
 
                         {/* Quantity + Cart */}
                         <div className="flex flex-wrap gap-3 mb-5">
-                            <div className="flex items-center border bg-gray-50j ">
+                            <div className="flex items-center border bg-muted-50j">
                                 <button
                                     type="button"
                                     onClick={decreaseQuantity}
@@ -298,7 +298,7 @@ const ProductDetailCard = () => {
                                 type="button"
                                 onClick={handleAddToCart}
                                 disabled={pending}
-                                className="flex-1 min-w-36 bg-accent-foreground text-white px-4 py-3 flex items-center justify-center gap-2 hover:bg-orange-700"
+                                className="flex-1 min-w-36 bg-accent-foreground text-primary-foreground px-4 py-3 flex items-center justify-center gap-2 hover:bg-brand-hover"
                             >
                                 <ShoppingCart size={18} />
                                 {pending ? "Adding..." : "Add to Cart"}
@@ -311,19 +311,19 @@ const ProductDetailCard = () => {
                                         `Buy Now: ${product.name}. Connect your checkout logic to continue.`
                                     )
                                 }
-                                className="flex-1 min-w-36 bg-black text-white px-6 py-3"
+                                className="flex-1 min-w-36 bg-foreground text-primary-foreground px-6 py-3"
                             >
                                 Buy Now
                             </button>
                         </div>
                         {cartMessage && (
-                            <p className="mb-5 text-sm" role="status">
+                            <p className="mb-5 text-fluid-sm" role="status">
                                 {cartMessage}
                             </p>
                         )}
 
                         {/* Wishlist / Compare / Share */}
-                        <div className="flex flex-wrap gap-6 text-sm text-gray-600">
+                        <div className="flex flex-wrap gap-6 text-fluid-sm text-text-secondary">
                             <button
                                 type="button"
                                 onClick={() =>
@@ -357,11 +357,11 @@ const ProductDetailCard = () => {
                         {/* Delivery */}
                         <div className="border mt-6 p-4 space-y-4">
                             <div className="flex gap-3">
-                                <Truck size={32} color="white" className="shrink-0 bg-foreground rounded-full p-1.5 " />
+                                <Truck size={32} color="var(--primary-foreground)" className="shrink-0 bg-foreground rounded-full p-1.5" />
 
                                 <div>
-                                    <h3 className="font-bold text-lg">Fast Delivery</h3>
-                                    <p className="text-sm text-gray-500">
+                                    <h3 className="text-fluid-xl font-bold">Delivery</h3>
+                                    <p className="text-fluid-sm text-muted-foreground">
                                         {product.shipping ||
                                             "Shipping information is not available."}
                                     </p>
@@ -370,11 +370,11 @@ const ProductDetailCard = () => {
                             <div className="border -mx-4"></div>
 
                             <div className="flex gap-3">
-                                <RotateCcw size={32} color="white" className="shrink-0  bg-foreground rounded-full p-1.5" />
+                                <RotateCcw size={32} color="var(--primary-foreground)" className="shrink-0 bg-foreground rounded-full p-1.5" />
 
                                 <div>
-                                    <h3 className="font-bold text-lg">Easy Returns</h3>
-                                    <p className="text-sm text-gray-500">
+                                    <h3 className="text-fluid-lg font-bold">Easy Returns</h3>
+                                    <p className="text-fluid-sm text-muted-foreground">
                                         {product.returns ||
                                             "Return policy information is not available."}
                                     </p>
@@ -405,8 +405,8 @@ const ProductDetailCard = () => {
                                     setReviewMessage("");
                                 }}
                                 className={`pb-4 border-b-2 transition-colors ${activeTab === tab.id
-                                    ? "border-orange-600 font-semibold text-black"
-                                    : "border-transparent text-gray-500 hover:text-black"
+                                    ? "border-primary font-semibold text-foreground"
+                                    : "border-transparent text-muted-foreground hover:text-foreground"
                                     }`}
                             >
                                 {tab.label}
@@ -415,7 +415,7 @@ const ProductDetailCard = () => {
                     </div>
 
                     {/* TAB CONTENT */}
-                    <div className=" py-4 min-h-44">
+                    <div className="py-4 min-h-44">
                         {/* DESCRIPTION */}
                         {activeTab === "description" && (
                             <div
@@ -424,7 +424,7 @@ const ProductDetailCard = () => {
                                 aria-labelledby="tab-description"
                             >
 
-                                <p className="text-gray-600 leading-7 whitespace-pre-line">
+                                <p className="text-text-secondary leading-7 whitespace-pre-line">
                                     {product.description ||
                                         product.shortDescription ||
                                         "No description available."}
@@ -450,7 +450,7 @@ const ProductDetailCard = () => {
                                                 >
                                                     <span className="font-medium">{key}</span>
 
-                                                    <span className="text-gray-500 text-right">
+                                                    <span className="text-muted-foreground text-right">
                                                         {String(value)}
                                                     </span>
                                                 </div>
@@ -458,7 +458,7 @@ const ProductDetailCard = () => {
                                         )}
                                     </div>
                                 ) : (
-                                    <p className="text-gray-500">
+                                    <p className="text-muted-foreground">
                                         No specifications available.
                                     </p>
                                 )}
@@ -490,13 +490,13 @@ const ProductDetailCard = () => {
                                                         {review.user?.name ?? review.name}
                                                     </p>
 
-                                                    <p className="text-sm text-gray-500">
+                                                    <p className="text-fluid-sm text-muted-foreground">
                                                         {getTimeAgo(review.createdAt)}
                                                     </p>
                                                 </div>
                                             </div>
 
-                                            <p className="text-gray-600 whitespace-pre-line mt-4">
+                                            <p className="text-text-secondary whitespace-pre-line mt-4">
                                                 {review.comment}
                                             </p>
 
@@ -513,8 +513,8 @@ const ProductDetailCard = () => {
                                                             }
                                                             className={
                                                                 star <= review.rating
-                                                                    ? "text-yellow-500"
-                                                                    : "text-gray-300"
+                                                                    ? "text-warning"
+                                                                    : "text-border-strong"
                                                             }
                                                         />
                                                     ))}
@@ -522,7 +522,7 @@ const ProductDetailCard = () => {
 
                                                 <button
                                                     type="submit"
-                                                    className="flex items-center gap-2 bg-muted text-gray-700 font-bold px-5 py-2 rounded hover:bg-muted-foreground cursor-pointer"
+                                                    className="flex items-center gap-2 bg-muted text-text-secondary font-bold px-5 py-2 rounded hover:bg-muted-foreground cursor-pointer"
                                                 >
                                                     <Undo2 size={20} />Reply
                                                 </button>
@@ -542,7 +542,7 @@ const ProductDetailCard = () => {
                                     <div>
                                         <label
                                             htmlFor="review-name"
-                                            className="block text-sm font-medium mb-2"
+                                            className="block text-fluid-sm font-medium mb-2"
                                         >
                                             Your Name
                                         </label>
@@ -567,7 +567,7 @@ const ProductDetailCard = () => {
                                     <div>
                                         <label
                                             htmlFor="review-rating"
-                                            className="block text-sm font-medium mb-2"
+                                            className="block text-fluid-sm font-medium mb-2"
                                         >
                                             Your Rating
                                         </label>
@@ -594,7 +594,7 @@ const ProductDetailCard = () => {
                                     <div>
                                         <label
                                             htmlFor="review-comment"
-                                            className="block text-sm font-medium mb-2"
+                                            className="block text-fluid-sm font-medium mb-2"
                                         >
                                             Your Review
                                         </label>
@@ -618,14 +618,14 @@ const ProductDetailCard = () => {
 
                                     <button
                                         type="submit"
-                                        className="bg-orange-600 text-white px-5 py-2 rounded hover:bg-orange-700 cursor-pointer"
+                                        className="bg-primary text-primary-foreground px-5 py-2 rounded hover:bg-brand-hover cursor-pointer"
                                     >
                                         Submit Review
                                     </button>
 
                                     {reviewMessage && (
                                         <p
-                                            className="text-sm text-gray-600"
+                                            className="text-fluid-sm text-text-secondary"
                                             role="status"
                                         >
                                             {reviewMessage}
@@ -651,7 +651,7 @@ const ProductDetailCard = () => {
                                             Shipping & Delivery
                                         </h3>
 
-                                        <p className="text-gray-600 leading-7 whitespace-pre-line">
+                                        <p className="text-text-secondary leading-7 whitespace-pre-line">
                                             {product.shipping ||
                                                 "Shipping information is not available."}
                                         </p>
@@ -666,7 +666,7 @@ const ProductDetailCard = () => {
                                             Returns & Refunds
                                         </h3>
 
-                                        <p className="text-gray-600 leading-7 whitespace-pre-line">
+                                        <p className="text-text-secondary leading-7 whitespace-pre-line">
                                             {product.returns ||
                                                 "Return policy information is not available."}
                                         </p>

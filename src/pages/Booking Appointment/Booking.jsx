@@ -29,14 +29,14 @@ const Booking = ({ onBack, onBook }) => {
         <div className="flex min-h-screen">
             <HeroPanel heroImage={salonHeroImg} />
 
-            <div className="flex w-full flex-col bg-gray-50 lg:w-3/5">
+            <div className="flex w-full flex-col bg-muted lg:w-3/5">
 
              <Link to="/services/services-list">
-                <div className="flex items-center gap-2 border-b border-gray-200 px-6 py-5  ">
-                        <button onClick={onBack} className="group text-gray-700">
-                            <ChevronLeft size={22} className="text-gray-700 hover:text-primary cursor-pointer"/>
+                <div className="flex items-center gap-2 border-b border-border px-6 py-5">
+                        <button onClick={onBack} className="group text-text-secondary">
+                            <ChevronLeft size={22} className="text-text-secondary hover:text-primary cursor-pointer"/>
                         </button>
-                        <h2 className="text-2xl font-bold text-gray-900 hover:text-primary cursor-pointer">Choose Services</h2>
+                        <h2 className="text-fluid-2xl font-bold text-foreground hover:text-primary cursor-pointer">Choose Services</h2>
                 </div>
                 </Link>
 

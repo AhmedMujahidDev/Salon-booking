@@ -11,11 +11,11 @@ const categories = [
 ];
 
 const colors = [
-  { name: "Red", value: "Red", className: "bg-red-500" },
-  { name: "Green", value: "Green", className: "bg-green-500" },
-  { name: "Orange", value: "Orange", className: "bg-orange-500" },
-  { name: "Pink", value: "Pink", className: "bg-pink-500" },
-  { name: "Purple", value: "Purple", className: "bg-purple-500" },
+  { name: "Red", value: "Red", className: "bg-destructive" },
+  { name: "Green", value: "Green", className: "bg-success" },
+  { name: "Orange", value: "Orange", className: "bg-accent-orange" },
+  { name: "Pink", value: "Pink", className: "bg-accent-pink-strong" },
+  { name: "Purple", value: "Purple", className: "bg-accent-purple" },
 ];
 
 const ratings = [5, 4, 3, 2, 1];
@@ -77,16 +77,16 @@ const FilterSidebar = ({
   };
 
   return (
-    <aside className="w-full border border-gray-200 bg-white">
+    <aside className="w-full border border-border bg-background">
 
       {/* Header */}
-      <div className="border-b border-gray-200 px-5 py-4">
-        <h2 className="text-lg font-semibold text-gray-900">
+      <div className="border-b border-border px-5 py-4">
+        <h2 className="text-fluid-lg font-semibold text-foreground">
           Filter
         </h2>
       </div>
 
-      <div className="divide-y divide-gray-200">
+      <div className="divide-y divide-border">
 
         {/* Search */}
         <div className="p-5">
@@ -96,12 +96,12 @@ const FilterSidebar = ({
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search"
-              className="h-10 w-full border border-gray-200 px-3 pr-10 text-sm outline-none transition focus:border-gray-400"
+              className="h-10 w-full border border-border px-3 pr-10 text-fluid-sm outline-none transition focus:border-border-strong"
             />
 
             <Search
               size={16}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground"
             />
           </div>
         </div>
@@ -116,7 +116,7 @@ const FilterSidebar = ({
             {categories.map((category) => (
               <label
                 key={category}
-                className="flex cursor-pointer items-center gap-2 text-sm text-gray-600"
+                className="flex cursor-pointer items-center gap-2 text-fluid-sm text-text-secondary"
               >
                 <input
                   type="checkbox"
@@ -141,7 +141,7 @@ const FilterSidebar = ({
             {colors.map((color) => (
               <label
                 key={color.value}
-                className="flex cursor-pointer items-center gap-2.5 text-sm text-gray-600"
+                className="flex cursor-pointer items-center gap-2.5 text-fluid-sm text-text-secondary"
               >
                 <input
                   type="checkbox"
@@ -179,12 +179,12 @@ const FilterSidebar = ({
               className="w-full cursor-pointer accent-primary"
             />
 
-            <div className="mt-2 flex justify-between text-xs text-gray-500">
+            <div className="mt-2 flex justify-between text-fluid-xs text-muted-foreground">
               <span>$0</span>
               <span>${priceRange}</span>
             </div>
 
-            <p className="mt-3 text-xs text-gray-500">
+            <p className="mt-3 text-fluid-xs text-muted-foreground">
               Range: $0 - ${priceRange}
             </p>
           </div>
@@ -200,7 +200,7 @@ const FilterSidebar = ({
             {ratings.map((rating) => (
               <label
                 key={rating}
-                className="flex cursor-pointer items-center gap-2 text-sm"
+                className="flex cursor-pointer items-center gap-2 text-fluid-sm"
               >
                 <input
                   type="checkbox"
@@ -216,14 +216,14 @@ const FilterSidebar = ({
                       size={13}
                       className={
                         index < rating
-                          ? "fill-yellow-400 text-yellow-400"
-                          : "text-gray-300"
+                          ? "fill-warning text-warning"
+                          : "text-border-strong"
                       }
                     />
                   ))}
                 </div>
 
-                <span className="text-xs text-gray-500">
+                <span className="text-fluid-xs text-muted-foreground">
                   {rating}.0
                 </span>
               </label>
@@ -236,14 +236,14 @@ const FilterSidebar = ({
           <button
             type="button"
             onClick={resetFilters}
-            className="flex-1 bg-gray-900 px-4 py-3 text-sm font-medium text-white transition hover:bg-gray-800"
+            className="flex-1 bg-foreground px-4 py-3 text-fluid-sm font-medium text-primary-foreground transition hover:bg-foreground"
           >
             Reset
           </button>
 
           <button
             type="button"
-            className="flex-1 bg-primary px-4 py-3 text-sm font-medium text-white transition hover:opacity-90"
+            className="flex-1 bg-primary px-4 py-3 text-fluid-sm font-medium text-primary-foreground transition hover:opacity-90"
           >
             Filter
           </button>
@@ -271,7 +271,7 @@ const FilterSection = ({
         onClick={onToggle}
         className="mb-4 flex w-full items-center justify-between"
       >
-        <span className="text-sm font-semibold text-gray-900">
+        <span className="text-fluid-sm font-semibold text-foreground">
           {title}
         </span>
 

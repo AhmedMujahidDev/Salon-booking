@@ -12,33 +12,33 @@ const ServiceRow = ({ service, onRemove }) => {
         setshowStaff(false)
     }
     return (
-        <div className="mt-3 flex items-center gap-4 rounded-lg bg-gray-50 px-4 py-3">
-            <GripVertical size={16} className="shrink-0 text-gray-300" />
+        <div className="mt-3 flex items-center gap-4 rounded-lg bg-muted px-4 py-3">
+            <GripVertical size={16} className="shrink-0 text-border-strong" />
 
             <div className="min-w-[140px]">
-                <p className="text-sm font-bold text-gray-900">{service.title}</p>
-                <p className="text-xs text-gray-500">{service.duration}</p>
+                <p className="text-fluid-sm font-bold text-foreground">{service.title}</p>
+                <p className="text-fluid-xs text-muted-foreground">{service.duration}</p>
             </div>
 
             <div className="min-w-[160px]">
-                <p className="mb-1 text-xs font-semibold text-gray-500">Staff</p>
+                <p className="mb-1 text-fluid-xs font-semibold text-muted-foreground">Staff</p>
                 <div className="flex items-center gap-2">
                     <img
                         src={selectedStaff?.image }
                         alt={selectedStaff?.name }
                         className="h-5 w-5 rounded-full object-cover"
                     />
-                    <span className="text-sm text-gray-900">{selectedStaff?.name}</span>
+                    <span className="text-fluid-sm text-foreground">{selectedStaff?.name}</span>
                     <button
                         type='button'
                         onClick={() => setshowStaff(true)}
-                        className="text-gray-400 hover:text-primary cursor-pointer">
+                        className="text-muted-foreground hover:text-primary cursor-pointer">
                         <Pencil size={12} />
                     </button>
                     <button
                         type='button'
                         onClick={() => setSelectedStaff(service.staff)}
-                        className="text-gray-400 hover:text-red-500 cursor-pointer">
+                        className="text-muted-foreground hover:text-destructive cursor-pointer">
                         <Trash2 size={12} />
                     </button>
 
@@ -54,18 +54,18 @@ const ServiceRow = ({ service, onRemove }) => {
             </div>
 
             <div className="min-w-[140px]">
-                <p className="text-xs font-semibold text-gray-500">Date & Time</p>
-                <p className="text-sm font-bold text-gray-900">{service.date?.day}/{service.date?.month}</p>
-                <p className="text-xs text-gray-500">{service.time}</p>
+                <p className="text-fluid-xs font-semibold text-muted-foreground">Date & Time</p>
+                <p className="text-fluid-sm font-bold text-foreground">{service.date?.day}/{service.date?.month}</p>
+                <p className="text-fluid-xs text-muted-foreground">{service.time}</p>
             </div>
 
             <div className="min-w-[80px]">
-                <p className="text-sm font-bold text-gray-900">${service.price}</p>
+                <p className="text-fluid-sm font-bold text-foreground">${service.price}</p>
             </div>
 
             {/* <button
                 onClick={() => onRemove(service.id)}
-                className="ml-auto flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-red-600 text-white"
+                className="ml-auto flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-destructive text-primary-foreground"
             >
                 <Trash2 size={14} />
             </button> */}

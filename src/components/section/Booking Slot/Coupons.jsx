@@ -45,7 +45,7 @@ const Coupons = ({ open, onOpenChange, onContinue, CouponDetail }) => {
                             >
                                 <div className="flex flex-col">
                                     <span className="text">{c.title}</span>
-                                    <span className="text-xs text-gray-700">{c.description}</span>
+                                    <span className="text-fluid-xs text-text-secondary">{c.description}</span>
                                 </div>
 
                                 <button

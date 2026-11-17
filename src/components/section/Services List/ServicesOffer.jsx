@@ -131,9 +131,9 @@ const servicesoffer = {
 
 const ServicesOffer = () => {
     return (
-        <section className='overflow-hidden bg-[#f7f7f5]'>
+        <section className='overflow-hidden bg-muted'>
             <div className='container-custom pt-16 text-center md:pt-24'>
-                <h2 className='font-heading text-3xl font-bold text-foreground md:text-5xl'>
+                <h2 className='font-heading text-fluid-3xl font-bold text-foreground'>
                     Professional Hair & Grooming Services
                 </h2>
             </div>

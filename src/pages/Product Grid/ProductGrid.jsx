@@ -51,7 +51,7 @@ const Products = () => {
 
           <div>
             <div className="mb-6 flex items-center justify-between">
-              <p className="text-sm text-gray-500">
+              <p className="text-fluid-sm text-muted-foreground">
                 {products.length} Products Found
               </p>
 

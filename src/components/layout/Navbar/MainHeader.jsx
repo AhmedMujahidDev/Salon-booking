@@ -8,9 +8,9 @@ import SideView from '../Navbar/SideView'
 
 const MainHeader = () => {
     return (
-        <header className="relative p-10">
-            <div className="container mx-auto">
-                <div className="relative flex h-20 items-center justify-between rounded-xl bg-white px-8 shadow-sm">
+        <header className="relative pt-10">
+            <div className="container-custom">
+                <div className="relative flex h-16 sm:h-20 items-center justify-between rounded-xl bg-background px-8 shadow-sm">
                     {/* Left Menu */}
                     <div className="w-[53%]">
                         <DesktopNav />

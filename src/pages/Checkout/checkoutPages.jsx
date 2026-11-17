@@ -112,9 +112,9 @@ export default function CheckoutPage({ onPlaceOrder }) {
                     "Cart"
                 ]} />
 
-            <div className="mx-auto max-w-[1080px] px-5 py-10 font-['Poppins',system-ui,sans-serif] text-[#1b1b1b]">
+            <div className="mx-auto max-w-[1080px] px-5 py-10 font-['Poppins',system-ui,sans-serif] text-foreground">
 
-                <h1 className="mb-5 font-['Oswald',sans-serif] text-2xl font-semibold">
+                <h1 className="mb-5 font-['Oswald',sans-serif] text-fluid-2xl font-semibold">
                     Secure Checkout
                 </h1>
 
@@ -158,7 +158,7 @@ export default function CheckoutPage({ onPlaceOrder }) {
                         />
 
                         {error && (
-                            <p className="mt-3 rounded bg-red-50 p-3 text-sm text-red-600">
+                            <p className="mt-3 rounded bg-danger-surface p-3 text-fluid-sm text-destructive">
                                 {error}
                             </p>
                         )}

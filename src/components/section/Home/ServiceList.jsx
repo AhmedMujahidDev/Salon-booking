@@ -7,7 +7,7 @@ const ServiceList = ({
 }) => {
     return (
         <div>
-            <h3 className='mb-4 text-3xl font-bold text-forground'>
+            <h3 className='mb-4 text-fluid-3xl font-bold text-forground'>
                 {title}
             </h3>
 

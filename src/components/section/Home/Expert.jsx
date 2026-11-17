@@ -10,17 +10,17 @@ const Expert = () => {
                 <div className='grid grid-cols-1 gap-12 px-6 lg:grid-cols-[350px_1fr] lg:gap-16'>
                     <div className='lg:sticky lg:top-24 lg:h-fit'>
 
-                        <span className="inline-flex items-center gap-3 rounded-full bg-primary px-4 py-1 text-sm font-semibold text-white">
+                        <span className="inline-flex items-center gap-3 rounded-full bg-primary px-4 py-1 text-fluid-sm font-semibold text-primary-foreground">
                             • Experts •
                         </span>
 
-                        <h2 className='mt-4 font-heading text-[40px] font-black leading-tight text-white'>
+                        <h2 className='mt-4 font-heading text-fluid-3xl font-black leading-tight text-primary-foreground'>
                             Our Skilled
                             <br />
                             Grooming Stylists
                         </h2>
 
-                        <p className='mt-4 text-sm leading-6 text-gray-300'>
+                        <p className='mt-4 text-fluid-sm leading-6 text-border-strong'>
                             Book your appointment today and experience premium barbering
                             services that redefine your grooming routine.
                         </p>

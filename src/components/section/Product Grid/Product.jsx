@@ -4,11 +4,11 @@ const Product = ({ products }) => {
   if (products.length === 0) {
     return (
       <div className="col-span-full py-20 text-center">
-        <h3 className="text-lg font-semibold">
+        <h3 className="text-fluid-lg font-semibold">
           No products found
         </h3>
 
-        <p className="mt-2 text-sm text-gray-500">
+        <p className="mt-2 text-fluid-sm text-muted-foreground">
           Try changing your search or filters.
         </p>
       </div>

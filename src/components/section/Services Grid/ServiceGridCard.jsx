@@ -99,7 +99,7 @@ const ServiceGridCard = () => {
                     {packages.map((pkg) => (
                         <div
                             key={pkg.title}
-                            className='overflow-hidden rounded-sm p-4 border border-black/10 bg-black/[0.03] transition-colors'>
+                            className='overflow-hidden rounded-sm p-4 border border-foreground/10 bg-foreground/[0.03] transition-colors'>
                             <div className='group h-72 w-full overflow-hidden cursor-pointer'>
                                 <img
                                     src={pkg.Image}
@@ -108,39 +108,39 @@ const ServiceGridCard = () => {
                             </div>
 
                             <div className='p-4'>
-                                <h3 className='text-2xl font-semibold hover:text-primary cursor-pointer'>
+                                <h3 className='text-fluid-2xl font-semibold hover:text-primary cursor-pointer'>
                                     {pkg.title}
                                 </h3>
 
-                                <p className='mt-3 text-gray-600 text-sm leading-relaxed '>
+                                <p className='mt-3 text-text-secondary text-fluid-sm leading-relaxed'>
                                     {pkg.description}
                                 </p>
 
-                                <div className='flex items-center gap-3 mt-4 '>
+                                <div className='flex items-center gap-3 mt-4'>
                                     {pkg.features.map((feature) => (
                                         <div
                                             key={feature}
-                                            className='flex items-center gap-1.5 text-sm text-gray-700'>
+                                            className='flex items-center gap-1.5 text-fluid-sm text-text-secondary'>
                                             <Check size={13} className='shrink-0 text-primary' />
                                             {feature}
                                         </div>
                                     ))}
                                 </div>
 
-                                <hr className='my-5 border-black/15' />
+                                <hr className='my-5 border-foreground/15' />
 
-                                <div className='mt-4 flex items-center justify-between border-t border-white/10 pt-3'>
+                                <div className='mt-4 flex items-center justify-between border-t border-primary-foreground/10 pt-3'>
                                     <div>
-                                        <p className='text-sm text-gray-600 uppercase tracking-wide'>
+                                        <p className='text-fluid-sm text-text-secondary uppercase tracking-wide'>
                                             Start From
                                         </p>
 
-                                        <p className='text-3xl font-semibold'>
+                                        <p className='text-fluid-3xl font-semibold'>
                                             ${pkg.price}
                                         </p>
                                     </div>
 
-                                    <div className='flex items-center gap-1.5 rounded-md border border-white/10 px-2.5 py-0.5 text-base bg-black/5 '>
+                                    <div className='flex items-center gap-1.5 rounded-md border border-primary-foreground/10 px-2.5 py-0.5 text-fluid-base bg-foreground/5'>
                                         <Clock size={15} />
                                         {pkg.duration}
                                     </div>
@@ -154,7 +154,7 @@ const ServiceGridCard = () => {
                     <button
                         onClick={() => setPage((p) => Math.max(1, p - 1))}
                         disabled={page === 1}
-                        className='flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition-colors disabled:opacity-30'>
+                        className='flex h-10 w-10 items-center justify-center rounded-full border border-primary-foreground/10 transition-colors disabled:opacity-30'>
                         ‹
                     </button>
 
@@ -162,9 +162,9 @@ const ServiceGridCard = () => {
                         <button
                             key={num}
                             onClick={() => setPage(num)}
-                            className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-medium transition-colors ${page === num
-                                ? "bg-primary text-white"
-                                : "border border-white/10 hover:border-primary/40"
+                            className={`flex h-8 w-8 items-center justify-center rounded-full text-fluid-xs font-medium transition-colors ${page === num
+                                ? "bg-primary text-primary-foreground"
+                                : "border border-primary-foreground/10 hover:border-primary/40"
                                 }`}>
                             {num}
                         </button>
@@ -173,7 +173,7 @@ const ServiceGridCard = () => {
                     <button
                         onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                         disabled={page === totalPages}
-                        className='flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition-colors hover:border-primary/40 disabled:opacity-30'>
+                        className='flex h-10 w-10 items-center justify-center rounded-full border border-primary-foreground/10 transition-colors hover:border-primary/40 disabled:opacity-30'>
                         ›
                     </button>
                 </div>

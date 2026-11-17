@@ -7,11 +7,11 @@ const PurposeContent = () => {
     return (
         <div>
             <div>
-                <h1 className="font-heading text-3xl font-bold md:text-4xl">
+                <h1 className="font-heading text-fluid-3xl font-bold">
                     Our Purpose & Promise
                 </h1>
 
-                <p className="mt-4 leading-7 text-gray-600">
+                <p className="mt-4 leading-7 text-text-secondary">
                     At the heart of everything we do is a commitment to enhancing your natural beauty with expert care, creative passion, and an experience that leaves you feeling confident, refreshed, and truly valued.
                 </p>
             </div>
@@ -31,11 +31,11 @@ const PurposeContent = () => {
                         </div>
 
                         <div>
-                            <h2 className="mb-2 font-heading text-xl font-bold sm:text-2xl">
+                            <h2 className="mb-2 font-heading text-fluid-2xl font-bold">
                                 {items.title}
                             </h2>
 
-                            <p className="leading-7 text-gray-600">
+                            <p className="leading-7 text-text-secondary">
                                 {items.detail}
                             </p>
                         </div>

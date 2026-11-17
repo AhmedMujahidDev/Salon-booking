@@ -8,8 +8,8 @@ const methods = [
 
 export default function PaymentMethod({ method, onChange }) {
     return (
-        <section className="border border-[#e4e4e4] bg-white p-5 shadow-sm">
-            <h2 className="mb-4 border-b border-[#e4e4e4] pb-3 font-['Oswald',sans-serif] text-lg font-semibold">
+        <section className="border border-border bg-background p-5 shadow-sm">
+            <h2 className="mb-4 border-b border-border pb-3 font-['Oswald',sans-serif] text-fluid-lg font-semibold">
                 Payment Method
             </h2>
 
@@ -19,8 +19,8 @@ export default function PaymentMethod({ method, onChange }) {
                         key={item.id}
                         className={`flex cursor-pointer flex-col items-center justify-center gap-2 border p-4 text-center transition-colors ${
                             method === item.id
-                                ? "border-[#c4551a]"
-                                : "border-[#ddd]"
+                                ? "border-primary"
+                                : "border-border-strong"
                         }`}
                     >
                         <input
@@ -29,10 +29,10 @@ export default function PaymentMethod({ method, onChange }) {
                             value={item.id}
                             checked={method === item.id}
                             onChange={() => onChange(item.id)}
-                            className="accent-[#c4551a]"
+                            className="accent-primary"
                         />
 
-                        <span className="text-xs font-medium">
+                        <span className="text-fluid-xs font-medium">
                             {item.label}
                         </span>
                     </label>

@@ -27,18 +27,18 @@ const AvailableStaff = ({ open, onOpenChange, Staff = [], selectedStaffId, onSel
                                 <div
                                     key={s.id}
                                     className={`flex items-center justify-between border-2 px-3 py-4 transition-all ${
-                                        isSelected ? "opacity-50 bg-gray-200 cursor-not-allowed" : ""
+                                        isSelected ? "opacity-50 bg-border cursor-not-allowed" : ""
                                     }`}
                                 >
-                                    <div className="flex justify-center items-center gap-4 ">
+                                    <div className="flex justify-center items-center gap-4">
                                         <img
                                             src={s.image}
                                             alt={s.name}
                                             className="h-12 w-12 rounded-sm object-cover" />
 
                                         <div className="flex flex-col gap-1">
-                                            <span className="text-base font-medium">{s.name}</span>
-                                            <span className="text-xs text-gray-700">
+                                            <span className="text-fluid-base font-medium">{s.name}</span>
+                                            <span className="text-fluid-xs text-text-secondary">
                                                 {s.role}
                                             </span>
                                         </div>
@@ -54,7 +54,7 @@ const AvailableStaff = ({ open, onOpenChange, Staff = [], selectedStaffId, onSel
                                                 : "cursor-pointer"
                                         }`}>
                                         {isSelected ? (
-                                            <Check className="text-green-600" />
+                                            <Check className="text-success" />
                                         ) : (
                                             <CirclePlus className="text-primary" />
                                         )}

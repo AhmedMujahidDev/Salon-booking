@@ -30,30 +30,15 @@ const PlayVideo = () => {
                 </text>
             </svg>
 
-            <div className="absolute inset-2 rounded-full border-2 border-white" />
+            <div className="absolute inset-2 rounded-full border-2 border-primary-foreground" />
 
             <button
-                className="
-                relative
-                z-10
-                flex
-                h-16
-                w-16
-                items-center
-                justify-center
-                rounded-full
-                bg-primary
-                text-white
-                transition-all
-                duration-300
-                hover:scale-110
-                hover:bg-white
-                hover:text-primary"
+                className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground transition-all duration-300 hover:scale-110 hover:bg-background hover:text-primary"
             >
                 <Play
                     size={25}
                     fill="white"
-                    className="ml-1 "
+                    className="ml-1"
                 />
             </button>
         </div>

@@ -5,7 +5,7 @@ const SortDropdown = ({ sortBy, setSortBy }) => {
     <select
       value={sortBy}
       onChange={(e) => setSortBy(e.target.value)}
-      className="border border-gray-200 px-4 py-2 text-sm outline-none">
+      className="border border-border px-4 py-2 text-fluid-sm outline-none">
 
       <option value="newest">Newest</option>
       <option value="oldest">oldest</option>

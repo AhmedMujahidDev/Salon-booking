@@ -7,9 +7,9 @@ import img3 from "../../../assets/images/purpose-img-3.jpg"
 
 const Purpose = () => {
   return (
-    <section className='section-padding bg-[#fff9f6]'>
+    <section className='section-padding bg-surface-warm'>
         <div className='container-custom'>
-            <div className='grid grid-cols-1 items-center gap-40 lg:grid-cols-2'>
+            <div className='grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20'>
                 <PurposeImg  images={[img1, img2, img3]}/>
                 <PurposeContent />
             </div>

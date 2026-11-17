@@ -61,12 +61,12 @@ const testimonials = [
 ]
 const Testimonial = () => {
     return (
-        <section className="section-padding bg-[#fff9f6]">
+        <section className="section-padding bg-surface-warm">
             <div className="container-custom">
 
                 {/* Badge */}
                 <div className="text-center">
-                    <span className="inline-flex items-center gap-3 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white">
+                    <span className="inline-flex items-center gap-3 rounded-full bg-primary px-5 py-2 text-fluid-sm font-semibold text-primary-foreground">
                         <span>•</span>
                         Our Testimonials
                         <span>•</span>
@@ -74,7 +74,7 @@ const Testimonial = () => {
                 </div>
 
                 {/* Heading */}
-                <h2 className="mt-5 text-center font-heading text-3xl font-bold text-foreground md:text-4xl">
+                <h2 className="mt-5 text-center font-heading text-fluid-3xl font-bold text-foreground">
                     What Our Customers Say’s
                 </h2>
 

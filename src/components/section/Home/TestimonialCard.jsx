@@ -12,25 +12,25 @@ const TestimonialCard =({
   return (
     <section>
         <div>
-            <div className='group w-full max-w-[420px] bg-white px-8 py-10 text-center shadpow-lg rounded-sm hover:bg-black'>
+            <div className='group w-full max-w-[420px] bg-background px-8 py-10 text-center shadpow-lg rounded-sm hover:bg-foreground'>
                 <div className='flex flex-col items-center'>
-                    <div className='h-20 w-20 overflow-hidden rounded-full bg-pink-300'>
+                    <div className='h-20 w-20 overflow-hidden rounded-full bg-accent-pink'>
                         <img 
                         src={image}
                         alt={name}
                         className='h-full w-full object-cover'/>
                     </div>
 
-                    <h3 className='mt-3 font-heading text-2xl font-bold text-foreground group-hover:text-white'>
+                    <h3 className='mt-3 font-heading text-fluid-2xl font-bold text-foreground group-hover:text-primary-foreground'>
                         {name}
                     </h3>
 
-                    <p className='mt-1 text-lg font-semibold text-gray-500 group-hover:text-white'>
+                    <p className='mt-1 text-fluid-lg font-semibold text-muted-foreground group-hover:text-primary-foreground'>
                         {country}
                     </p>
                 </div>
 
-                <p className='mx-auto mt-2 max-w-[380px] text-base font-medium leading-7 text-gray-500 group-hover:text-white'>
+                <p className='mx-auto mt-2 max-w-[380px] text-fluid-base font-medium leading-7 text-muted-foreground group-hover:text-primary-foreground'>
                     {review}
                 </p>
 
@@ -45,7 +45,7 @@ const TestimonialCard =({
                         ))}
                     </div>
 
-                    <span className='text-lg font-semibold text-gray-500 group-hover:text-white'>
+                    <span className='text-fluid-lg font-semibold text-muted-foreground group-hover:text-primary-foreground'>
                         {rating}
                     </span>
                 </div>
