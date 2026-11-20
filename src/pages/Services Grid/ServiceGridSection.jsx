@@ -7,11 +7,11 @@ const ServiceGridSection = () => {
     <section>
 
       <Banner
-        title="Service List"
+        title="Package Grid"
         breadcrumbs={[
-          "Home",
-          "Service",
-          "Service Grid"
+          { label: "Home", to: "/" },
+          { label: "Service", to: "/services/services-list" },
+          { label: "Package Grid", to: "/services/package-grid" }
         ]} />
 
       <ServiceGridCard />

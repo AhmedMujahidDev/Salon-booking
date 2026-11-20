@@ -7,9 +7,9 @@ const Cart = () => {
         <Banner
                 title="Cart"
                 breadcrumbs={[
-                    "Home",
-                    "Shop",
-                    "Cart"
+                    { label: "Home", to: "/" },
+                    { label: "Shop", to: "/products-Grid" },
+                    { label: "Cart", to: "/cart" }
                 ]} />
         <CartPage />
     </section>

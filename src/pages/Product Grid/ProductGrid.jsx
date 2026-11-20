@@ -27,7 +27,10 @@ const Products = () => {
       {/* Banner */}
       <Banner
         title="Shop"
-        breadcrumbs={["Home", "Shop"]}
+        breadcrumbs={[
+          { label: "Home", to: "/" },
+          { label: "Shop", to: "/products-Grid" }
+        ]}
       />
 
       {/* Products Section */}

@@ -28,7 +28,7 @@ const FooterMain = () => {
                             traditions to ensure every client receives.
                         </p>
 
-                        <h3 className="mt-12 text-fluid-3xl font-bold">
+                        <h3 className="mt-12 text-fluid-2xl sm:text-fluid-3xl font-bold">
                             Subscribe for Newsletter
                         </h3>
 
@@ -51,7 +51,7 @@ const FooterMain = () => {
                     {/* <div className='flex gap-20 justify-center'> */}
                     <div>
 
-                        <h3 className="mb-8 text-fluid-3xl font-bold">
+                        <h3 className="mb-8 text-fluid-2xl sm:text-fluid-3xl font-bold">
                             Quick Links
                         </h3>
 
@@ -75,7 +75,7 @@ const FooterMain = () => {
 
                     <div>
 
-                        <h3 className="mb-8 text-fluid-3xl font-bold">
+                        <h3 className="mb-8 text-fluid-2xl sm:text-fluid-3xl font-bold">
                             Company
                         </h3>
 
@@ -100,11 +100,11 @@ const FooterMain = () => {
                     </div>
                     <div>
 
-                        <h3 className="mb-8 text-fluid-3xl font-bold">
+                        <h3 className="mb-8 text-fluid-2xl sm:text-fluid-3xl font-bold">
                             Working Hours
                         </h3>
 
-                        <div className="space-y-5">
+                        <div className="space-y-5 text-fluid-xs sm:text-fluid-base">
 
                             <p>
                                 MON - FRI
@@ -126,28 +126,28 @@ const FooterMain = () => {
 
                             <a
                                 href="#"
-                                className="flex h-12 w-12 items-center justify-center rounded-full bg-background/5 transition hover:bg-primary"
+                                className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-background/5 transition hover:bg-primary"
                             >
                                 <FaFacebookF size={18} />
                             </a>
 
                             <a
                                 href="#"
-                                className="flex h-12 w-12 items-center justify-center rounded-full bg-background/5 transition hover:bg-primary"
+                                className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-background/5 transition hover:bg-primary"
                             >
                                 <FaLinkedinIn size={18} />
                             </a>
 
                             <a
                                 href="#"
-                                className="flex h-12 w-12 items-center justify-center rounded-full bg-background/5 transition hover:bg-primary"
+                                className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-background/5 transition hover:bg-primary"
                             >
                                 <FaYoutube size={18} />
                             </a>
 
                             <a
                                 href="#"
-                                className="flex h-12 w-12 items-center justify-center rounded-full bg-background/5 transition hover:bg-primary"
+                                className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-background/5 transition hover:bg-primary"
                             >
                                 <FaInstagram size={18} />
                             </a>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const PurposeImg = ({ images }) => {
     return (
-        <div className='relative mx-auto aspect-[4/3] w-full max-w-[36rem]'>
+        <div className='hidden lg:block relative mx-auto aspect-[4/3] w-full max-w-[36rem]'>
             <img
                 src={images[2]}
                 alt="image 0"

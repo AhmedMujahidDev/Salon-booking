@@ -14,7 +14,7 @@ const BookingSlot = ({ open, onOpenChange, selectedService, onContinue }) => {
     const [selectedDate, setSelectedDate] = useState(dates[1]);
     const [activePeriod, setActivePeriod] = useState("Morning");
     const [selectedTime, setSelectedTime] = useState(slotPeriods.Morning[0]);
-    
+
     const getInitialServices = () => {
         if (selectedService) {
             return [{
@@ -29,7 +29,7 @@ const BookingSlot = ({ open, onOpenChange, selectedService, onContinue }) => {
         }
         return initialSelectedServices;
     };
-    
+
     const [services, setServices] = useState(getInitialServices());
     const [discount, setDiscount] = useState(0);
     const [showServices, setshowServices] = useState(false);
@@ -45,15 +45,15 @@ const BookingSlot = ({ open, onOpenChange, selectedService, onContinue }) => {
     return (
         <Sheet open={open} onOpenChange={onOpenChange}>
             <SheetContent
-                className="w-full overflow-y-auto p-6 sm:max-w-xl md:max-w-2xl"
+                className="!inset-0 !h-dvh !w-screen !max-w-none max-sm:!translate-x-0 overflow-y-auto p-4 pt-[max(4rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))] sm:!inset-y-0 sm:!right-0 sm:!left-auto sm:!h-full sm:!w-full sm:!max-w-2xl sm:p-6"
             >
                 <SheetHeader className="mb-2 p-0">
-                    <SheetTitle className="text-fluid-xl font-bold text-foreground">
+                    <SheetTitle className="-mt-9 sm:mt-0 text-fluid-xl font-bold text-foreground">
                         Time & Date
                     </SheetTitle>
                 </SheetHeader>
 
-                <h3 className="mb-3 mt-6 text-fluid-base font-bold text-foreground">
+                <h3 className="mb-3 mt-0 sm:mt-6 text-fluid-base font-bold text-foreground">
                     Choose Date & Time
                 </h3>
                 <DateCarousel
@@ -62,7 +62,7 @@ const BookingSlot = ({ open, onOpenChange, selectedService, onContinue }) => {
                     onSelect={setSelectedDate}
                 />
 
-                <div className="mt-6 flex items-center justify-between">
+                <div className="mt-6 block sm:flex items-center justify-between">
                     <h3 className="text-fluid-base font-bold text-foreground">Choose Slot</h3>
                     <SlotTabs active={activePeriod} onChange={setActivePeriod} />
                 </div>
@@ -72,20 +72,23 @@ const BookingSlot = ({ open, onOpenChange, selectedService, onContinue }) => {
                     onSelect={setSelectedTime}
                 />
 
-                <div className="mt-6 flex items-center gap-3">
-                    <h3 className="text-fluid-base font-bold text-foreground">Services</h3>
-                    <span className="rounded-md border border-border px-2 py-0.5 text-fluid-xs text-muted-foreground">
-                        Services : {services.length}
-                    </span>
+                <div className="mt-6 block sm:flex items-center gap-3">
+                    <div className="flex gap-3">
+                        <h3 className="text-fluid-base font-bold text-foreground">Services</h3>
+                        <span className="rounded-md border border-border px-2 py-0.5 text-fluid-xs text-muted-foreground">
+                            Services : {services.length}
+                        </span>
+                    </div>
                     <span className="rounded-md border border-border px-2 py-0.5 text-fluid-xs text-muted-foreground">
                         Total Duration : 30 Mins
                     </span>
-                    <button
-                        onClick={() => setshowServices(true)}
-                        className="ml-auto text-fluid-sm font-semibold text-primary underline cursor-pointer">
-                        Add Another Service
-                    </button>
-
+                    <div className="mt-2 sm:mt-0">
+                        <button
+                            onClick={() => setshowServices(true)}
+                            className="ml-auto text-fluid-sm font-semibold text-primary underline cursor-pointer">
+                            Add Another Service
+                        </button>
+                    </div>
                     <BookingLayout
                         open={showServices}
                         onOpenChange={setshowServices}
@@ -96,10 +99,10 @@ const BookingSlot = ({ open, onOpenChange, selectedService, onContinue }) => {
                 </div>
 
                 {services.map((service) => (
-                    <ServiceRow 
-                        key={service.id} 
-                        service={{...service, date: selectedDate, time: selectedTime}} 
-                        onRemove={handleRemoveService} 
+                    <ServiceRow
+                        key={service.id}
+                        service={{ ...service, date: selectedDate, time: selectedTime }}
+                        onRemove={handleRemoveService}
                     />
                 ))}
 

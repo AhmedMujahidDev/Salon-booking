@@ -12,7 +12,7 @@ const ServiceRow = ({ service, onRemove }) => {
         setshowStaff(false)
     }
     return (
-        <div className="mt-3 flex items-center gap-4 rounded-lg bg-muted px-4 py-3">
+        <div className="mt-3 flex min-w-0 flex-nowrap items-center gap-4 overflow-x-auto overflow-y-hidden rounded-lg bg-muted px-4 py-8 sm:px-4 sm:py-3 sm:overflow-visible">
             <GripVertical size={16} className="shrink-0 text-border-strong" />
 
             <div className="min-w-[140px]">
@@ -24,8 +24,8 @@ const ServiceRow = ({ service, onRemove }) => {
                 <p className="mb-1 text-fluid-xs font-semibold text-muted-foreground">Staff</p>
                 <div className="flex items-center gap-2">
                     <img
-                        src={selectedStaff?.image }
-                        alt={selectedStaff?.name }
+                        src={selectedStaff?.image}
+                        alt={selectedStaff?.name}
                         className="h-5 w-5 rounded-full object-cover"
                     />
                     <span className="text-fluid-sm text-foreground">{selectedStaff?.name}</span>

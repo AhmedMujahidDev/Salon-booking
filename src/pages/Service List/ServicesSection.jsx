@@ -9,9 +9,9 @@ const ServicesSection = () => {
       <Banner
         title="Service List"
         breadcrumbs={[
-          "Home",
-          "Service",
-          "Service List"
+          { label: "Home", to: "/" },
+          { label: "Service", to: "/services/services-list" },
+          { label: "Service List", to: "/services/services-list" }
         ]} />
       <ServicesOffer />
     </section>

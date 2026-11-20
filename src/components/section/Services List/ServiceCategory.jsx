@@ -9,20 +9,20 @@ const ServiceCategory = ({ title, items }) => {
                 strokeWidth={1}
                 className='absolute -right-3 top-0 text-border-strong' />
 
-            <h3 className='pr-14 font-heading text-fluid-4xl font-bold text-primary'>
+            <h3 className='pr-14 font-heading text-fluid-2xl sm:text-fluid-4xl font-bold text-primary'>
                 {title}
             </h3>
 
-            <div className='mt-8 space-y-5'>
+            <div className='mt-4 sm:mt-8 space-y-5'>
                 {items.map((servicesoffer) => (
                     <div key={servicesoffer.name}
                         className='flex items-start justify-between gap-6'>
                         <div>
-                            <h4 className='font-heading text-fluid-2xl font-bold text-foreground'>
+                            <h4 className='font-heading text-fluid-lg sm:text-fluid-2xl font-bold text-foreground'>
                                 {servicesoffer.name}
                             </h4>
 
-                            <p className='mt-1 text-fluid-sm leading-5 text-muted-foreground'>
+                            <p className='mt-1 text-fluid-xs sm:text-fluid-sm leading-5 text-muted-foreground'>
                                 {servicesoffer.description}
                             </p>
                         </div>

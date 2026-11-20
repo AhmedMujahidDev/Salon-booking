@@ -10,9 +10,9 @@ const Expert = () => {
                 <Banner
                     title="Meet Our Experts"
                     breadcrumbs={[
-                        "Home",
-                        "Pages",
-                        "Meet Our Experts"
+                        { label: "Home", to: "/" },
+                        { label: "Pages", to: "/expert" },
+                        { label: "Meet Our Experts", to: "/expert" }
                     ]} />
 
                 <div className='section-padding'>

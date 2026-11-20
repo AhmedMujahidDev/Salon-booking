@@ -155,7 +155,7 @@ const ProductDetailCard = () => {
                             )}
                         </div>
 
-                        <div className="flex flex-wrap gap-4 mt-4">
+                        <div className="flex gap-4 mt-4">
                             {product.images?.map((image, index) => (
                                 <button
                                     key={`${image}-${index}`}
@@ -163,7 +163,7 @@ const ProductDetailCard = () => {
                                     onClick={() => setSelectedImage(index)}
                                     aria-label={`View image ${index + 1}`}
                                     aria-pressed={selectedImage === index}
-                                    className={`w-40 h-40 p-2 bg-muted ${selectedImage === index
+                                    className={`w-30 h-20 sm:w-40 sm:h-40 p-2 bg-muted ${selectedImage === index
                                         ? "bg-secondary"
                                         : "border-border"
                                         }`}
@@ -388,7 +388,7 @@ const ProductDetailCard = () => {
                 <div className="mt-12 border-t pt-8">
                     {/* TAB BUTTONS */}
                     <div
-                        className="flex flex-wrap gap-6 border-b"
+                        className="flex gap-6 border-b overflow-y-scroll"
                         role="tablist"
                         aria-label="Product details"
                     >

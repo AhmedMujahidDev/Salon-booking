@@ -5,7 +5,7 @@ import AboutFeatureCard from '../Home/AboutFeatureCard'
 const AboutUsContent = () => {
     return (
         <div>
-            <h2 className='max-w-xl text-fluid-3xl font-black leading-tight text-foreground'>
+            <h2 className='max-w-xl text-fluid-xl font-black leading-tight text-foreground'>
                 Your Ultimate One Stop Salon Management Solution
             </h2>
 

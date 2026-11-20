@@ -132,13 +132,13 @@ const servicesoffer = {
 const ServicesOffer = () => {
     return (
         <section className='overflow-hidden bg-muted'>
-            <div className='container-custom pt-16 text-center md:pt-24'>
-                <h2 className='font-heading text-fluid-3xl font-bold text-foreground'>
+            <div className='container-custom pt-10 text-center md:pt-24'>
+                <h2 className='font-heading text-fluid-4xl sm:text-fluid-3xl font-bold text-foreground'>
                     Professional Hair & Grooming Services
                 </h2>
             </div>
 
-            <div className='container-custom grid grid-cols-1 gap-10 py-16 lg:grid-cols-2 lg:gap-20'>
+            <div className='container-custom grid grid-cols-1 gap-10 py-5 sm:py-16 lg:grid-cols-2 lg:gap-20'>
                 <ServiceCategory {...servicesoffer.haircut} />
 
                 <ServiceCategory {...servicesoffer.facial} />
@@ -156,7 +156,7 @@ const ServicesOffer = () => {
             <div className='container-custom grid grid-cols-1 gap-10 py-16 md:py-24 lg:grid-cols-[2fr_1fr_2fr] lg:gap-20'>
                 <ServiceCategory {...servicesoffer.beard} />
 
-                <div className='flex justify-center'>
+                <div className='hidden sm:flex justify-center'>
 
                 <img 
                 src= {element}

@@ -11,9 +11,9 @@ const AboutUs = () => {
             <Banner
                 title="About Us"
                 breadcrumbs={[
-                    "Home",
-                    "Pages",
-                    "About Us"
+                    { label: "Home", to: "/" },
+                    { label: "Pages", to: "/about" },
+                    { label: "About Us", to: "/about" }
                 ]} />
 
                 <AboutSection />

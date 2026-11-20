@@ -9,7 +9,7 @@ import { categories } from "./data";
 import SearchBar from "./SearchBar";
 import ServiceCategory from "../../section/Booking Appoinment/ServiceCategory";
 
-const BookingLayout = ({
+const   BookingLayout = ({
     open,
     onOpenChange,
     onBack,

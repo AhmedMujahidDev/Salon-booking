@@ -12,9 +12,9 @@ const Membership = () => {
             <Banner
                 title="Membership"
                 breadcrumbs={[
-                    "Home",
-                    "Pages",
-                    "Membership"
+                    { label: "Home", to: "/" },
+                    { label: "Pages", to: "/membership" },
+                    { label: "Membership", to: "/membership" }
                 ]} />
 
             <JoinMembership />

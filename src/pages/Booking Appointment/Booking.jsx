@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ChevronLeft } from "lucide-react";
 import { categories } from "../../components/section/Booking Appoinment/data";
 import HeroPanel from "../../components/section/Booking Appoinment/HeroPanel";
@@ -7,7 +7,7 @@ import ServiceCategory from "../../components/section/Booking Appoinment/Service
 import salonHeroImg from "../../assets/images/booking-appointment-banner.jpg";
 import { Link } from "react-router-dom";
 
-const Booking = ({ onBack, onBook }) => {
+const Booking = ({ onBook }) => {
     const [search, setSearch] = useState("");
     const [openCats, setOpenCats] = useState(
         categories.reduce((acc, c) => ({ ...acc, [c.name]: true }), {})
@@ -30,14 +30,16 @@ const Booking = ({ onBack, onBook }) => {
             <HeroPanel heroImage={salonHeroImg} />
 
             <div className="flex w-full flex-col bg-muted lg:w-3/5">
+                <h1 className="px-6 pt-6 font-heading text-fluid-2xl font-bold text-foreground lg:hidden">
+                    Book Your Salon Appointment
+                </h1>
 
-             <Link to="/services/services-list">
-                <div className="flex items-center gap-2 border-b border-border px-6 py-5">
-                        <button onClick={onBack} className="group text-text-secondary">
-                            <ChevronLeft size={22} className="text-text-secondary hover:text-primary cursor-pointer"/>
-                        </button>
-                        <h2 className="text-fluid-2xl font-bold text-foreground hover:text-primary cursor-pointer">Choose Services</h2>
-                </div>
+                <Link
+                    to="/services/services-list"
+                    className="flex items-center gap-2 border-b border-border px-6 py-5 text-foreground hover:text-primary"
+                >
+                    <ChevronLeft size={22} />
+                    <span className="text-fluid-2xl font-bold">Choose Services</span>
                 </Link>
 
                 <SearchBar value={search} onChange={setSearch} />

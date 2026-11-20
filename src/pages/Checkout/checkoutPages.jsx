@@ -107,9 +107,9 @@ export default function CheckoutPage({ onPlaceOrder }) {
             <Banner
                 title="Cart"
                 breadcrumbs={[
-                    "Home",
-                    "Shop",
-                    "Cart"
+                    { label: "Home", to: "/" },
+                    { label: "Shop", to: "/products-Grid" },
+                    { label: "Cart", to: "/cart" }
                 ]} />
 
             <div className="mx-auto max-w-[1080px] px-5 py-10 font-['Poppins',system-ui,sans-serif] text-foreground">

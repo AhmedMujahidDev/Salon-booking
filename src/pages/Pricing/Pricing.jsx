@@ -10,9 +10,9 @@ const Pricing = () => {
             <Banner
                 title="Pricing"
                 breadcrumbs={[
-                    "Home",
-                    "Pages",
-                    "Pricing"
+                    { label: "Home", to: "/" },
+                    { label: "Pages", to: "/pricing" },
+                    { label: "Pricing", to: "/pricing" }
                 ]} />
 
             <div className="space-y-6 m-16">

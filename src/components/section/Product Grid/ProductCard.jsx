@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
       1,
       product.color ? { label: 'Color', value: product.color } : null,
     )
-    setCartMessage(result.ok )
+    setCartMessage(result.ok)
   }
 
   return (
@@ -34,37 +34,39 @@ const ProductCard = ({ product }) => {
         </Link>
 
         <Link
-            to={`/products-detail/${product.id}`}
-            className="absolute p-2 right-0 top-30 z-10 translate-x-full bg-background rounded-2xl hover:bg-accent-foreground transition-transform duration-300 group-hover:-translate-x-2">
-            <Eye
-              size={20} />
+          to={`/products-detail/${product.id}`}
+          className="absolute right-0 top-30 z-10 translate-x-0 bg-background rounded-2xl p-2 transition-transform duration-300 md:translate-x-full md:group-hover:-translate-x-2">
+          <Eye
+            size={20} />
         </Link>
 
         <button
-            type='button'
-            onClick={() => setIsLiked(!isLiked)}
-            className="absolute p-2 right-0 top-42 z-10 translate-x-full bg-background rounded-2xl transition-transform duration-300 group-hover:-translate-x-2 cursor-pointer">
-            <Heart
-              size={20}
-              className={
-                isLiked ? "fill-destructive text-destructive" : "text-muted-foreground hover:text-accent-foreground "
-              } />
+          type='button'
+          onClick={() => setIsLiked(!isLiked)}
+          className="absolute right-0 top-42 z-10 translate-x-0 bg-background rounded-2xl p-2 transition-transform duration-300 md:translate-x-full md:group-hover:-translate-x-2 cursor-pointer">
+          <Heart
+            size={20}
+            className={
+              isLiked ? "fill-destructive text-destructive" : "text-muted-foreground hover:text-accent-foreground "
+            } />
         </button>
 
         <button
           type="button"
           onClick={handleAddToCart}
           disabled={pending}
-          className="absolute bottom-0 left-0 flex w-full translate-y-full items-center justify-center gap-2 bg-accent-foreground py-5 text-fluid-sm font-bold text-primary-foreground transition-transform duration-300 group-hover:translate-y-0 cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
+          className="absolute bottom-0 left-0 flex w-full translate-y-0 items-center justify-center gap-2 bg-accent-foreground py-4 text-fluid-sm font-bold text-primary-foreground transition-transform duration-300 md:translate-y-full md:group-hover:translate-y-0 cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
         >
           <ShoppingCart />
           {pending ? 'Adding...' : 'Add To Cart'}
         </button>
       </div>
 
-      {cartMessage && (
-        <p className="mt-2 text-fluid-sm" role="status">{cartMessage}</p>
-      )}
+      {
+        cartMessage && (
+          <p className="mt-2 text-fluid-sm" role="status">{cartMessage}</p>
+        )
+      }
 
       <div className='mt-3 flex items-center gap-1'>
         {[1, 2, 3, 4, 5].map((star) => (
@@ -97,7 +99,7 @@ const ProductCard = ({ product }) => {
           </span>
         )}
       </div>
-    </div>
+    </div >
   )
 }
 

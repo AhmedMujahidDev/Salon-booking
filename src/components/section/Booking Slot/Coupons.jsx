@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import {
     Dialog,
@@ -9,13 +10,11 @@ import {
 import { Check, Copy } from "lucide-react";
 
 const Coupons = ({ open, onOpenChange, onContinue, CouponDetail }) => {
-
     const [copied, setCopied] = useState(null);
 
     const handlecopy = async (code, id) => {
         try {
             await navigator.clipboard.writeText(code);
-
             setCopied(id);
 
             setTimeout(() => {
@@ -29,29 +28,34 @@ const Coupons = ({ open, onOpenChange, onContinue, CouponDetail }) => {
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
-            <DialogContent>
+            <DialogContent className="flex max-h-[85dvh] w-[calc(100%-2rem)] max-w-lg flex-col overflow-hidden p-4 sm:p-6">
                 <DialogHeader>
                     <DialogTitle>Coupons</DialogTitle>
                     <hr />
                 </DialogHeader>
 
-                <div className="w-full">
-                    <div className="flex w-full flex-col items-stretch gap-3">
+                <div className="min-h-0 w-full flex-1 overflow-y-auto">
+                    <div className="flex w-full flex-col gap-3">
 
                         {CouponDetail.map((c) => (
                             <div
                                 key={c.id}
-                                className="flex justify-between items-center gap-40 border-2 px-3 py-4"
+                                className="flex min-w-0 flex-col gap-3 rounded-md border-2 px-3 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
                             >
-                                <div className="flex flex-col">
-                                    <span className="text">{c.title}</span>
-                                    <span className="text-fluid-xs text-text-secondary">{c.description}</span>
+                                <div className="min-w-0 flex-1">
+                                    <span className="block text-fluid-base font-semibold">
+                                        {c.title}
+                                    </span>
+
+                                    <span className="block break-words text-fluid-xs text-text-secondary">
+                                        {c.description}
+                                    </span>
                                 </div>
 
                                 <button
                                     type="button"
                                     onClick={() => handlecopy(c.code, c.id)}
-                                    className="flex cursor-pointer gap-2 border border-dashed border-primary bg-primary/20 p-1 font-bold text-primary"
+                                    className="flex w-fit shrink-0 cursor-pointer items-center gap-2 border border-dashed border-primary bg-primary/20 p-2 font-bold text-primary"
                                 >
                                     {c.code}
 

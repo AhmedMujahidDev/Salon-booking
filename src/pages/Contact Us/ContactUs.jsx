@@ -10,9 +10,9 @@ const ContactUs = () => {
             <Banner
                 title="Contact Us"
                 breadcrumbs={[
-                    "Home",
-                    "Pages",
-                    "Contact Us"
+                    { label: "Home", to: "/" },
+                    { label: "Pages", to: "/contact-us" },
+                    { label: "Contact Us", to: "/contact-us" }
                 ]} />
 
             <div className='container-custom'>

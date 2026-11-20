@@ -31,6 +31,7 @@ const Expert = () => {
                             <ExpertCard
                                 key={emp.id}
                                 employee={emp}
+                                darkBackground
                             />
                         ))}
                     </div>

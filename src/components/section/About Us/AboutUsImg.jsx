@@ -5,7 +5,7 @@ import subabout03 from "../../../assets/images/sub-about-3.jpg"
 
 const AboutUsImg = () => {
     return (
-        <div className='grid grid-cols-1 items-center gap-6 lg:grid-cols-2'>
+        <div className='hidden lg:grid grid-cols-1 items-center gap-6 lg:grid-cols-2'>
 
             <div className='lg:col-span-2'>
                 <img
