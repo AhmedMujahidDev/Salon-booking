@@ -1,9 +1,11 @@
 import MainLayout from '@/layouts/MainLayout'
+import PrivateRoutes from "../routes/PrivateRoutes"
 import Home from '@/pages/Home/Home'
 import { Route, Routes } from 'react-router-dom'
-import React from 'react'
 import Signup from '../components/section/Sign Up/Signup'
+import VerifyOtp from '../components/section/Sign Up/VerifyOtp'
 import Signin from '../components/section/Sign In/Signin'
+import VerifyLoginOtp from '../components/section/Sign In/VerifyLoginOtp'
 import ForgotPassword from '../components/section/Forgot Password/ForgotPassword'
 import ResetPassword from '../components/section/Reset Password/ResetPassword'
 import ServicesSection from '../pages/Service List/ServicesSection'
@@ -18,21 +20,25 @@ import ProductGrid from '@/pages/Product Grid/ProductGrid'
 import ProductDetail from '@/pages/Product Detail/ProductDetail'
 import Cart from '@/pages/Cart/cart'
 import CheckoutPage from '@/pages/Checkout/checkoutPages'
+import { MyBookings, MyProfile } from '@/pages/Account/AccountPages'
 
 const AppRoutes = () => {
     return (
         <Routes>
             <Route path="/sign-up" element={<Signup />} />
+            <Route path="/verify-otp" element={<VerifyOtp />} />
             <Route path="/sign-in" element={<Signin />} />
+            <Route path="/verify-login-otp" element={<VerifyLoginOtp />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/booking-appointment" element={<Booking />} />
 
             <Route element={<MainLayout />}>
-                <Route
-                    path='/'
-                    element={<Home />}
-                />
+                <Route element={<PrivateRoutes />}>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/profile" element={<MyProfile />} />
+                    <Route path="/my-bookings" element={<MyBookings />} />
+                </Route>
 
                 <Route path='/services/services-list' element={<ServicesSection />} />
                 <Route path='/services/package-grid' element={<ServicesGridSection />} />
