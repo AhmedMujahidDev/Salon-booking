@@ -9,6 +9,14 @@ export function errors(error, req, res, next) {
         : error.name === "MulterError"
           ? 422
           : 500);
+  if (status >= 500) {
+    console.error("API request failed.", {
+      method: req.method,
+      path: req.path,
+      errorName: error.name,
+      errorCode: error.code,
+    });
+  }
   // Never return stack traces, database queries, provider errors, passwords or tokens.
   res.status(status).json({
     error:
